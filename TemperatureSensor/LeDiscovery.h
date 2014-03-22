@@ -79,8 +79,8 @@
 /****************************************************************************/
 /*								UI controls									*/
 /****************************************************************************/
-@property (nonatomic, assign) id<LeDiscoveryDelegate>           discoveryDelegate;
-@property (nonatomic, assign) id<LeTemperatureAlarmProtocol>	peripheralDelegate;
+@property (nonatomic, assign) id<LeDiscoveryDelegate>   discoveryDelegate;
+@property (nonatomic, assign) id<StrokeDataProtocol>	peripheralDelegate;
 
 
 /****************************************************************************/
@@ -97,5 +97,5 @@
 /*							Access to the devices							*/
 /****************************************************************************/
 @property (retain, nonatomic) NSMutableArray    *foundPeripherals;
-@property (retain, nonatomic) NSMutableArray	*connectedServices;	// Array of LeTemperatureAlarmService
+@property (retain, nonatomic) NSMutableArray	*connectedServices;	// Array
 @end

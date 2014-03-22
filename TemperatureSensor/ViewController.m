@@ -57,7 +57,7 @@
 
 
 
-@interface ViewController ()  <LeDiscoveryDelegate, LeTemperatureAlarmProtocol, UITableViewDataSource, UITableViewDelegate>
+@interface ViewController ()  <LeDiscoveryDelegate, StrokeDataProtocol, UITableViewDataSource, UITableViewDelegate>
 @property (retain, nonatomic) LeTemperatureAlarmService *currentlyDisplayingService;
 @property (retain, nonatomic) NSMutableArray            *connectedServices;
 @property (retain, nonatomic) IBOutlet UILabel          *currentlyConnectedSensor;
@@ -97,7 +97,7 @@
     
 	[[LeDiscovery sharedInstance] setDiscoveryDelegate:self];
     [[LeDiscovery sharedInstance] setPeripheralDelegate:self];
-    [[LeDiscovery sharedInstance] startScanningForUUIDString:kTemperatureServiceUUIDString];
+    [[LeDiscovery sharedInstance] startScanningForUUIDString:kStrokeDataServiceUUIDString];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackgroundNotification:) name:kAlarmServiceEnteredBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForegroundNotification:) name:kAlarmServiceEnteredForegroundNotification object:nil];

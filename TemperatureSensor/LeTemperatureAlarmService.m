@@ -57,10 +57,10 @@
 
 
 //NSString *kTemperatureServiceUUIDString = @"DEADF154-0000-0000-0000-0000DEADF154";
-NSString *kTemperatureServiceUUIDString = @"00001523-1212-EFDE-1523-785FEABCD123";
+NSString *kStrokeDataServiceUUIDString = @"00001523-1212-EFDE-1523-785FEABCD123";
 
 //NSString *kCurrentTemperatureCharacteristicUUIDString = @"CCCCFFFF-DEAD-F154-1319-740381000000";
-NSString *kCurrentTemperatureCharacteristicUUIDString = @"00001524-1212-EFDE-1523-785FEABCD123";
+NSString *kHeightCharacteristicUUIDString = @"00001524-1212-EFDE-1523-785FEABCD123";
 
 NSString *kMinimumTemperatureCharacteristicUUIDString = @"C0C0C0C0-DEAD-F154-1319-740381000000";
 NSString *kMaximumTemperatureCharacteristicUUIDString = @"EDEDEDED-DEAD-F154-1319-740381000000";
@@ -85,7 +85,7 @@ NSString *kAlarmServiceEnteredForegroundNotification = @"kAlarmServiceEnteredFor
     CBUUID              *maximumTemperatureUUID;
     CBUUID              *currentTemperatureUUID;
 
-    id<LeTemperatureAlarmProtocol>	peripheralDelegate;
+    id<StrokeDataProtocol>	peripheralDelegate;
 }
 @end
 
@@ -101,7 +101,7 @@ NSString *kAlarmServiceEnteredForegroundNotification = @"kAlarmServiceEnteredFor
 /****************************************************************************/
 /*								Init										*/
 /****************************************************************************/
-- (id) initWithPeripheral:(CBPeripheral *)peripheral controller:(id<LeTemperatureAlarmProtocol>)controller
+- (id) initWithPeripheral:(CBPeripheral *)peripheral controller:(id<StrokeDataProtocol>)controller
 {
     self = [super init];
     if (self) {
@@ -111,7 +111,7 @@ NSString *kAlarmServiceEnteredForegroundNotification = @"kAlarmServiceEnteredFor
         
         minimumTemperatureUUID	= [[CBUUID UUIDWithString:kMinimumTemperatureCharacteristicUUIDString] retain];
         maximumTemperatureUUID	= [[CBUUID UUIDWithString:kMaximumTemperatureCharacteristicUUIDString] retain];
-        currentTemperatureUUID	= [[CBUUID UUIDWithString:kCurrentTemperatureCharacteristicUUIDString] retain];
+        currentTemperatureUUID	= [[CBUUID UUIDWithString:kHeightCharacteristicUUIDString] retain];
         temperatureAlarmUUID	= [[CBUUID UUIDWithString:kAlarmCharacteristicUUIDString] retain];
 	}
     return self;
@@ -150,7 +150,7 @@ NSString *kAlarmServiceEnteredForegroundNotification = @"kAlarmServiceEnteredFor
 /****************************************************************************/
 - (void) start
 {
-	CBUUID	*serviceUUID	= [CBUUID UUIDWithString:kTemperatureServiceUUIDString];
+	CBUUID	*serviceUUID	= [CBUUID UUIDWithString:kStrokeDataServiceUUIDString];
 	NSArray	*serviceArray	= [NSArray arrayWithObjects:serviceUUID, nil];
 
     [servicePeripheral discoverServices:serviceArray];
@@ -183,7 +183,7 @@ NSString *kAlarmServiceEnteredForegroundNotification = @"kAlarmServiceEnteredFor
 	temperatureAlarmService = nil;
     
 	for (CBService *service in services) {
-		if ([[service UUID] isEqual:[CBUUID UUIDWithString:kTemperatureServiceUUIDString]]) {
+		if ([[service UUID] isEqual:[CBUUID UUIDWithString:kStrokeDataServiceUUIDString]]) {
 			temperatureAlarmService = service;
 			break;
 		}
@@ -295,11 +295,11 @@ NSString *kAlarmServiceEnteredForegroundNotification = @"kAlarmServiceEnteredFor
 {
     // Find the fishtank service
     for (CBService *service in [servicePeripheral services]) {
-        if ([[service UUID] isEqual:[CBUUID UUIDWithString:kTemperatureServiceUUIDString]]) {
+        if ([[service UUID] isEqual:[CBUUID UUIDWithString:kStrokeDataServiceUUIDString]]) {
             
             // Find the temperature characteristic
             for (CBCharacteristic *characteristic in [service characteristics]) {
-                if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:kCurrentTemperatureCharacteristicUUIDString]] ) {
+                if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:kHeightCharacteristicUUIDString]] ) {
                     
                     // And STOP getting notifications from it
                     [servicePeripheral setNotifyValue:NO forCharacteristic:characteristic];
@@ -314,11 +314,11 @@ NSString *kAlarmServiceEnteredForegroundNotification = @"kAlarmServiceEnteredFor
 {
     // Find the fishtank service
     for (CBService *service in [servicePeripheral services]) {
-        if ([[service UUID] isEqual:[CBUUID UUIDWithString:kTemperatureServiceUUIDString]]) {
+        if ([[service UUID] isEqual:[CBUUID UUIDWithString:kStrokeDataServiceUUIDString]]) {
             
             // Find the temperature characteristic
             for (CBCharacteristic *characteristic in [service characteristics]) {
-                if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:kCurrentTemperatureCharacteristicUUIDString]] ) {
+                if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:kHeightCharacteristicUUIDString]] ) {
                     
                     // And START getting notifications from it
                     [servicePeripheral setNotifyValue:YES forCharacteristic:characteristic];

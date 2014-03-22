@@ -106,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				B9182552148D79B900D6064E /* LE */,
-				B9182543148D762600D6064E /* AppDelegate.h */,
-				B9182544148D762600D6064E /* AppDelegate.m */,
 				B9182546148D762600D6064E /* MainStoryboard.storyboard */,
 				B9182549148D762600D6064E /* ViewController.h */,
 				B918254A148D762600D6064E /* ViewController.m */,
@@ -119,6 +117,8 @@
 		B918253B148D762600D6064E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9182543148D762600D6064E /* AppDelegate.h */,
+				B9182544148D762600D6064E /* AppDelegate.m */,
 				B9C383771491694800CFD0B5 /* Default@2x.png */,
 				B9C383751491694300CFD0B5 /* Icon-57.png */,
 				B9C383721491694000CFD0B5 /* Icon-114.png */,

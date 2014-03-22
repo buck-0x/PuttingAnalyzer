@@ -59,8 +59,8 @@
 /****************************************************************************/
 /*						Service Characteristics								*/
 /****************************************************************************/
-extern NSString *kTemperatureServiceUUIDString;                 // DEADF154-0000-0000-0000-0000DEADF154     Service UUID
-extern NSString *kCurrentTemperatureCharacteristicUUIDString;   // CCCCFFFF-DEAD-F154-1319-740381000000     Current Temperature Characteristic
+extern NSString *kStrokeDataServiceUUIDString;                 // DEADF154-0000-0000-0000-0000DEADF154     Service UUID
+extern NSString *kHeightCharacteristicUUIDString;   // CCCCFFFF-DEAD-F154-1319-740381000000     Current Temperature Characteristic
 extern NSString *kMinimumTemperatureCharacteristicUUIDString;   // C0C0C0C0-DEAD-F154-1319-740381000000     Minimum Temperature Characteristic
 extern NSString *kMaximumTemperatureCharacteristicUUIDString;   // EDEDEDED-DEAD-F154-1319-740381000000     Maximum Temperature Characteristic
 extern NSString *kAlarmCharacteristicUUIDString;                // AAAAAAAA-DEAD-F154-1319-740381000000     Alarm Characteristic
@@ -78,7 +78,7 @@ typedef enum {
     kAlarmLow   = 1,
 } AlarmType;
 
-@protocol LeTemperatureAlarmProtocol<NSObject>
+@protocol StrokeDataProtocol<NSObject>
 - (void) alarmService:(LeTemperatureAlarmService*)service didSoundAlarmOfType:(AlarmType)alarm;
 - (void) alarmServiceDidStopAlarm:(LeTemperatureAlarmService*)service;
 - (void) alarmServiceDidChangeTemperature:(LeTemperatureAlarmService*)service;
@@ -93,7 +93,7 @@ typedef enum {
 /****************************************************************************/
 @interface LeTemperatureAlarmService : NSObject
 
-- (id) initWithPeripheral:(CBPeripheral *)peripheral controller:(id<LeTemperatureAlarmProtocol>)controller;
+- (id) initWithPeripheral:(CBPeripheral *)peripheral controller:(id<StrokeDataProtocol>)controller;
 - (void) reset;
 - (void) start;
 
