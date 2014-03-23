@@ -47,7 +47,7 @@
                                 </connections>
                             </stepper>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MAX 0º" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" enabled="NO" id="GHM-P9-UQD">
-                                <rect key="frame" x="167" y="143" width="133" height="37"/>
+                                <rect key="frame" x="195" y="114" width="133" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -61,7 +61,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MIN 0º" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" enabled="NO" id="d8W-iD-ak9">
-                                <rect key="frame" x="20" y="143" width="129" height="37"/>
+                                <rect key="frame" x="0.0" y="84" width="129" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -75,18 +75,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2WU-rw-n0d">
-                                <rect key="frame" x="42" y="134" width="84" height="55"/>
+                                <rect key="frame" x="37" y="132" width="89" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="2" eventType="touchUpInside" id="tc5-0u-Oeq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wd4-vN-PhD">
-                                <rect key="frame" x="217" y="146" width="33" height="30"/>
+                                <rect key="frame" x="186" y="134" width="96" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopButtonPressed" destination="2" eventType="touchUpInside" id="jFz-GA-GXz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

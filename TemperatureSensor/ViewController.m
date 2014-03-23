@@ -65,8 +65,12 @@
 @property (retain, nonatomic) IBOutlet UILabel          *maxAlarmLabel,*minAlarmLabel;
 @property (retain, nonatomic) IBOutlet UITableView      *sensorsTable;
 @property (retain, nonatomic) IBOutlet UIStepper        *maxAlarmStepper,*minAlarmStepper;
+- (IBAction)startButtonPressed;
+- (IBAction)stopButtonPressed;
 - (IBAction)maxStepperChanged;
 - (IBAction)minStepperChanged;
+
+@property (retain, nonatomic) NSMutableArray            *heightValues;
 @end
 
 
@@ -82,6 +86,8 @@
 @synthesize maxAlarmLabel,minAlarmLabel;
 @synthesize maxAlarmStepper,minAlarmStepper;
 
+@synthesize heightValues;
+
 
 
 #pragma mark -
@@ -94,6 +100,7 @@
     [super viewDidLoad];
     
     connectedServices = [NSMutableArray new];
+    heightValues = [NSMutableArray new];
     
 	[[LeDiscovery sharedInstance] setDiscoveryDelegate:self];
     [[LeDiscovery sharedInstance] setPeripheralDelegate:self];
@@ -106,6 +113,10 @@
     minAlarmLabel.hidden = YES;
     maxAlarmStepper.hidden = YES;
     minAlarmStepper.hidden = YES;
+    
+    
+    
+    
 }
 
 
@@ -461,4 +472,17 @@
     
     [currentlyDisplayingService writeLowAlarmTemperature:newTemp];
 }
+
+- (IBAction)startButtonPressed
+{
+    
+    
+}
+
+- (IBAction)stopButtonPressed
+{
+    
+    
+}
+
 @end
