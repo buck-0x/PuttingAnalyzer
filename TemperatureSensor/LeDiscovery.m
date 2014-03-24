@@ -105,7 +105,6 @@
 {
     // We are a singleton and as such, dealloc shouldn't be called.
     assert(NO);
-    [super dealloc];
 }
 
 
@@ -134,7 +133,7 @@
         if (!uuid)
             continue;
         
-        [centralManager retrievePeripherals:[NSArray arrayWithObject:(id)uuid]];
+        [centralManager retrievePeripherals:[NSArray arrayWithObject:(id)CFBridgingRelease(uuid)]];
         CFRelease(uuid);
     }
 
@@ -156,7 +155,7 @@
     
     uuidString = CFUUIDCreateString(NULL, uuid);
     if (uuidString) {
-        [newDevices addObject:(NSString*)uuidString];
+        [newDevices addObject:(NSString*)CFBridgingRelease(uuidString)];
         CFRelease(uuidString);
     }
     /* Store */
@@ -176,7 +175,7 @@
 
 		uuidString = CFUUIDCreateString(NULL, uuid);
 		if (uuidString) {
-			[newDevices removeObject:(NSString*)uuidString];
+			[newDevices removeObject:(NSString*)CFBridgingRelease(uuidString)];
             CFRelease(uuidString);
         }
 		/* Store */
@@ -267,7 +266,7 @@
 	LeTemperatureAlarmService	*service	= nil;
 	
 	/* Create a service instance. */
-	service = [[[LeTemperatureAlarmService alloc] initWithPeripheral:peripheral controller:peripheralDelegate] autorelease];
+	service = [[LeTemperatureAlarmService alloc] initWithPeripheral:peripheral controller:peripheralDelegate];
 	[service start];
 
 	if (![connectedServices containsObject:service])

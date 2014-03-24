@@ -22,59 +22,15 @@
 		B9C383781491694800CFD0B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C383771491694800CFD0B5 /* Default@2x.png */; };
 		FB10259618BE8C1A003FDB32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */; };
 		FB26179018DF9B6600CD7044 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB26178F18DF9B6600CD7044 /* ViewController.m */; };
-		FB61BB5618DFADD300D70F47 /* Area2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2218DFADD300D70F47 /* Area2D.swf */; };
-		FB61BB5718DFADD300D70F47 /* Bar2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2318DFADD300D70F47 /* Bar2D.swf */; };
-		FB61BB5818DFADD300D70F47 /* Bubble.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2418DFADD300D70F47 /* Bubble.swf */; };
-		FB61BB5918DFADD300D70F47 /* Column2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2518DFADD300D70F47 /* Column2D.swf */; };
-		FB61BB5A18DFADD300D70F47 /* Column3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2618DFADD300D70F47 /* Column3D.swf */; };
-		FB61BB5B18DFADD300D70F47 /* Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2718DFADD300D70F47 /* Data.xml */; };
-		FB61BB5C18DFADD300D70F47 /* Doughnut2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2818DFADD300D70F47 /* Doughnut2D.swf */; };
-		FB61BB5D18DFADD300D70F47 /* Doughnut3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2918DFADD300D70F47 /* Doughnut3D.swf */; };
-		FB61BB5E18DFADD300D70F47 /* FCExporter.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2A18DFADD300D70F47 /* FCExporter.swf */; };
-		FB61BB5F18DFADD300D70F47 /* firebug-lite.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2B18DFADD300D70F47 /* firebug-lite.js */; };
-		FB61BB6018DFADD300D70F47 /* FusionCharts.HC.Charts.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2C18DFADD300D70F47 /* FusionCharts.HC.Charts.js */; };
-		FB61BB6118DFADD300D70F47 /* FusionCharts.HC.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2D18DFADD300D70F47 /* FusionCharts.HC.js */; };
-		FB61BB6218DFADD300D70F47 /* FusionCharts.jqueryplugin.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2E18DFADD300D70F47 /* FusionCharts.jqueryplugin.js */; };
-		FB61BB6318DFADD300D70F47 /* FusionCharts.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB2F18DFADD300D70F47 /* FusionCharts.js */; };
-		FB61BB6418DFADD300D70F47 /* FusionChartsExportComponent.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3018DFADD300D70F47 /* FusionChartsExportComponent.js */; };
-		FB61BB6518DFADD300D70F47 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3118DFADD300D70F47 /* jquery.min.js */; };
-		FB61BB6618DFADD300D70F47 /* Line.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3218DFADD300D70F47 /* Line.swf */; };
-		FB61BB6718DFADD300D70F47 /* Marimekko.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3318DFADD300D70F47 /* Marimekko.swf */; };
-		FB61BB6818DFADD300D70F47 /* MSArea.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3418DFADD300D70F47 /* MSArea.swf */; };
-		FB61BB6918DFADD300D70F47 /* MSBar2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3518DFADD300D70F47 /* MSBar2D.swf */; };
-		FB61BB6A18DFADD300D70F47 /* MSBar3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3618DFADD300D70F47 /* MSBar3D.swf */; };
-		FB61BB6B18DFADD300D70F47 /* MSColumn2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3718DFADD300D70F47 /* MSColumn2D.swf */; };
-		FB61BB6C18DFADD300D70F47 /* MSColumn3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3818DFADD300D70F47 /* MSColumn3D.swf */; };
-		FB61BB6D18DFADD300D70F47 /* MSColumn3DLineDY.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3918DFADD300D70F47 /* MSColumn3DLineDY.swf */; };
-		FB61BB6E18DFADD300D70F47 /* MSColumnLine3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3A18DFADD300D70F47 /* MSColumnLine3D.swf */; };
-		FB61BB6F18DFADD300D70F47 /* MSCombi2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3B18DFADD300D70F47 /* MSCombi2D.swf */; };
-		FB61BB7018DFADD300D70F47 /* MSCombi3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3C18DFADD300D70F47 /* MSCombi3D.swf */; };
-		FB61BB7118DFADD300D70F47 /* MSCombiDY2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3D18DFADD300D70F47 /* MSCombiDY2D.swf */; };
-		FB61BB7218DFADD300D70F47 /* MSLine.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3E18DFADD300D70F47 /* MSLine.swf */; };
-		FB61BB7318DFADD300D70F47 /* MSStackedColumn2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB3F18DFADD300D70F47 /* MSStackedColumn2D.swf */; };
-		FB61BB7418DFADD300D70F47 /* MSStackedColumn2DLineDY.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4018DFADD300D70F47 /* MSStackedColumn2DLineDY.swf */; };
-		FB61BB7518DFADD300D70F47 /* Pareto2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4118DFADD300D70F47 /* Pareto2D.swf */; };
-		FB61BB7618DFADD300D70F47 /* Pareto3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4218DFADD300D70F47 /* Pareto3D.swf */; };
-		FB61BB7718DFADD300D70F47 /* Pie2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4318DFADD300D70F47 /* Pie2D.swf */; };
-		FB61BB7818DFADD300D70F47 /* Pie3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4418DFADD300D70F47 /* Pie3D.swf */; };
-		FB61BB7918DFADD300D70F47 /* Scatter.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4518DFADD300D70F47 /* Scatter.swf */; };
-		FB61BB7A18DFADD300D70F47 /* ScrollArea2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4618DFADD300D70F47 /* ScrollArea2D.swf */; };
-		FB61BB7B18DFADD300D70F47 /* ScrollColumn2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4718DFADD300D70F47 /* ScrollColumn2D.swf */; };
-		FB61BB7C18DFADD300D70F47 /* ScrollCombi2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4818DFADD300D70F47 /* ScrollCombi2D.swf */; };
-		FB61BB7D18DFADD300D70F47 /* ScrollCombiDY2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4918DFADD300D70F47 /* ScrollCombiDY2D.swf */; };
-		FB61BB7E18DFADD300D70F47 /* ScrollLine2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4A18DFADD300D70F47 /* ScrollLine2D.swf */; };
-		FB61BB7F18DFADD300D70F47 /* ScrollStackedColumn2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4B18DFADD300D70F47 /* ScrollStackedColumn2D.swf */; };
-		FB61BB8018DFADD300D70F47 /* SSGrid.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4C18DFADD300D70F47 /* SSGrid.swf */; };
-		FB61BB8118DFADD300D70F47 /* StackedArea2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4D18DFADD300D70F47 /* StackedArea2D.swf */; };
-		FB61BB8218DFADD300D70F47 /* StackedBar2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4E18DFADD300D70F47 /* StackedBar2D.swf */; };
-		FB61BB8318DFADD300D70F47 /* StackedBar3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB4F18DFADD300D70F47 /* StackedBar3D.swf */; };
-		FB61BB8418DFADD300D70F47 /* StackedColumn2D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB5018DFADD300D70F47 /* StackedColumn2D.swf */; };
-		FB61BB8518DFADD300D70F47 /* StackedColumn2DLine.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB5118DFADD300D70F47 /* StackedColumn2DLine.swf */; };
-		FB61BB8618DFADD300D70F47 /* StackedColumn3D.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB5218DFADD300D70F47 /* StackedColumn3D.swf */; };
-		FB61BB8718DFADD300D70F47 /* StackedColumn3DLine.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB5318DFADD300D70F47 /* StackedColumn3DLine.swf */; };
-		FB61BB8818DFADD300D70F47 /* StackedColumn3DLineDY.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB5418DFADD300D70F47 /* StackedColumn3DLineDY.swf */; };
-		FB61BB8918DFADD300D70F47 /* ZoomLine.swf in Resources */ = {isa = PBXBuildFile; fileRef = FB61BB5518DFADD300D70F47 /* ZoomLine.swf */; };
 		FB61BB8C18DFAE7F00D70F47 /* HeightGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB61BB8B18DFAE7F00D70F47 /* HeightGraphViewController.m */; };
+		FB61BC3118DFCE8C00D70F47 /* firebug-lite.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */; };
+		FB61BC3218DFCE8C00D70F47 /* FusionCharts.HC.Charts.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */; };
+		FB61BC3318DFCE8C00D70F47 /* FusionCharts.HC.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */; };
+		FB61BC3418DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */; };
+		FB61BC3518DFCE8C00D70F47 /* FusionCharts.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */; };
+		FB61BC3618DFCE8C00D70F47 /* FusionChartsExportComponent.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */; };
+		FB61BC3718DFCE8C00D70F47 /* jquery.min.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BC0318DFCE8C00D70F47 /* jquery.min.js */; };
+		FB61BC5C18DFCE8C00D70F47 /* Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = FB61BC2818DFCE8C00D70F47 /* Data.xml */; };
 		FBB0353C18C9041400D0FF28 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB0353B18C9041400D0FF28 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,60 +57,16 @@
 		FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB26178E18DF9B6600CD7044 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FB26178F18DF9B6600CD7044 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FB61BB2218DFADD300D70F47 /* Area2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Area2D.swf; sourceTree = "<group>"; };
-		FB61BB2318DFADD300D70F47 /* Bar2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bar2D.swf; sourceTree = "<group>"; };
-		FB61BB2418DFADD300D70F47 /* Bubble.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubble.swf; sourceTree = "<group>"; };
-		FB61BB2518DFADD300D70F47 /* Column2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Column2D.swf; sourceTree = "<group>"; };
-		FB61BB2618DFADD300D70F47 /* Column3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Column3D.swf; sourceTree = "<group>"; };
-		FB61BB2718DFADD300D70F47 /* Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Data.xml; sourceTree = "<group>"; };
-		FB61BB2818DFADD300D70F47 /* Doughnut2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Doughnut2D.swf; sourceTree = "<group>"; };
-		FB61BB2918DFADD300D70F47 /* Doughnut3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Doughnut3D.swf; sourceTree = "<group>"; };
-		FB61BB2A18DFADD300D70F47 /* FCExporter.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FCExporter.swf; sourceTree = "<group>"; };
-		FB61BB2B18DFADD300D70F47 /* firebug-lite.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "firebug-lite.js"; sourceTree = "<group>"; };
-		FB61BB2C18DFADD300D70F47 /* FusionCharts.HC.Charts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.HC.Charts.js; sourceTree = "<group>"; };
-		FB61BB2D18DFADD300D70F47 /* FusionCharts.HC.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.HC.js; sourceTree = "<group>"; };
-		FB61BB2E18DFADD300D70F47 /* FusionCharts.jqueryplugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.jqueryplugin.js; sourceTree = "<group>"; };
-		FB61BB2F18DFADD300D70F47 /* FusionCharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.js; sourceTree = "<group>"; };
-		FB61BB3018DFADD300D70F47 /* FusionChartsExportComponent.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionChartsExportComponent.js; sourceTree = "<group>"; };
-		FB61BB3118DFADD300D70F47 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
-		FB61BB3218DFADD300D70F47 /* Line.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Line.swf; sourceTree = "<group>"; };
-		FB61BB3318DFADD300D70F47 /* Marimekko.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Marimekko.swf; sourceTree = "<group>"; };
-		FB61BB3418DFADD300D70F47 /* MSArea.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSArea.swf; sourceTree = "<group>"; };
-		FB61BB3518DFADD300D70F47 /* MSBar2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSBar2D.swf; sourceTree = "<group>"; };
-		FB61BB3618DFADD300D70F47 /* MSBar3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSBar3D.swf; sourceTree = "<group>"; };
-		FB61BB3718DFADD300D70F47 /* MSColumn2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSColumn2D.swf; sourceTree = "<group>"; };
-		FB61BB3818DFADD300D70F47 /* MSColumn3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSColumn3D.swf; sourceTree = "<group>"; };
-		FB61BB3918DFADD300D70F47 /* MSColumn3DLineDY.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSColumn3DLineDY.swf; sourceTree = "<group>"; };
-		FB61BB3A18DFADD300D70F47 /* MSColumnLine3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSColumnLine3D.swf; sourceTree = "<group>"; };
-		FB61BB3B18DFADD300D70F47 /* MSCombi2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSCombi2D.swf; sourceTree = "<group>"; };
-		FB61BB3C18DFADD300D70F47 /* MSCombi3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSCombi3D.swf; sourceTree = "<group>"; };
-		FB61BB3D18DFADD300D70F47 /* MSCombiDY2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSCombiDY2D.swf; sourceTree = "<group>"; };
-		FB61BB3E18DFADD300D70F47 /* MSLine.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSLine.swf; sourceTree = "<group>"; };
-		FB61BB3F18DFADD300D70F47 /* MSStackedColumn2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSStackedColumn2D.swf; sourceTree = "<group>"; };
-		FB61BB4018DFADD300D70F47 /* MSStackedColumn2DLineDY.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MSStackedColumn2DLineDY.swf; sourceTree = "<group>"; };
-		FB61BB4118DFADD300D70F47 /* Pareto2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pareto2D.swf; sourceTree = "<group>"; };
-		FB61BB4218DFADD300D70F47 /* Pareto3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pareto3D.swf; sourceTree = "<group>"; };
-		FB61BB4318DFADD300D70F47 /* Pie2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pie2D.swf; sourceTree = "<group>"; };
-		FB61BB4418DFADD300D70F47 /* Pie3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pie3D.swf; sourceTree = "<group>"; };
-		FB61BB4518DFADD300D70F47 /* Scatter.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Scatter.swf; sourceTree = "<group>"; };
-		FB61BB4618DFADD300D70F47 /* ScrollArea2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScrollArea2D.swf; sourceTree = "<group>"; };
-		FB61BB4718DFADD300D70F47 /* ScrollColumn2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScrollColumn2D.swf; sourceTree = "<group>"; };
-		FB61BB4818DFADD300D70F47 /* ScrollCombi2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScrollCombi2D.swf; sourceTree = "<group>"; };
-		FB61BB4918DFADD300D70F47 /* ScrollCombiDY2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScrollCombiDY2D.swf; sourceTree = "<group>"; };
-		FB61BB4A18DFADD300D70F47 /* ScrollLine2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScrollLine2D.swf; sourceTree = "<group>"; };
-		FB61BB4B18DFADD300D70F47 /* ScrollStackedColumn2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScrollStackedColumn2D.swf; sourceTree = "<group>"; };
-		FB61BB4C18DFADD300D70F47 /* SSGrid.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SSGrid.swf; sourceTree = "<group>"; };
-		FB61BB4D18DFADD300D70F47 /* StackedArea2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StackedArea2D.swf; sourceTree = "<group>"; };
-		FB61BB4E18DFADD300D70F47 /* StackedBar2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StackedBar2D.swf; sourceTree = "<group>"; };
-		FB61BB4F18DFADD300D70F47 /* StackedBar3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StackedBar3D.swf; sourceTree = "<group>"; };
-		FB61BB5018DFADD300D70F47 /* StackedColumn2D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StackedColumn2D.swf; sourceTree = "<group>"; };
-		FB61BB5118DFADD300D70F47 /* StackedColumn2DLine.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StackedColumn2DLine.swf; sourceTree = "<group>"; };
-		FB61BB5218DFADD300D70F47 /* StackedColumn3D.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StackedColumn3D.swf; sourceTree = "<group>"; };
-		FB61BB5318DFADD300D70F47 /* StackedColumn3DLine.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StackedColumn3DLine.swf; sourceTree = "<group>"; };
-		FB61BB5418DFADD300D70F47 /* StackedColumn3DLineDY.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StackedColumn3DLineDY.swf; sourceTree = "<group>"; };
-		FB61BB5518DFADD300D70F47 /* ZoomLine.swf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ZoomLine.swf; sourceTree = "<group>"; };
 		FB61BB8A18DFAE7F00D70F47 /* HeightGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightGraphViewController.h; sourceTree = "<group>"; };
 		FB61BB8B18DFAE7F00D70F47 /* HeightGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightGraphViewController.m; sourceTree = "<group>"; };
+		FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "firebug-lite.js"; sourceTree = "<group>"; };
+		FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.HC.Charts.js; sourceTree = "<group>"; };
+		FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.HC.js; sourceTree = "<group>"; };
+		FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.jqueryplugin.js; sourceTree = "<group>"; };
+		FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.js; sourceTree = "<group>"; };
+		FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionChartsExportComponent.js; sourceTree = "<group>"; };
+		FB61BC0318DFCE8C00D70F47 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
+		FB61BC2818DFCE8C00D70F47 /* Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Data.xml; sourceTree = "<group>"; };
 		FBB0353B18C9041400D0FF28 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -176,7 +88,14 @@
 		B9182525148D762500D6064E = {
 			isa = PBXGroup;
 			children = (
-				FB61BB2018DFADC900D70F47 /* Resources */,
+				FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */,
+				FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */,
+				FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */,
+				FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */,
+				FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */,
+				FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */,
+				FB61BC0318DFCE8C00D70F47 /* jquery.min.js */,
+				FB61BC2818DFCE8C00D70F47 /* Data.xml */,
 				FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */,
 				B9ADCFD41497DA600098522D /* ReadMe.txt */,
 				B918253A148D762600D6064E /* TemperatureSensor */,
@@ -253,73 +172,6 @@
 			name = iPad;
 			sourceTree = "<group>";
 		};
-		FB61BB2018DFADC900D70F47 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FB61BB2118DFADD300D70F47 /* Charts */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		FB61BB2118DFADD300D70F47 /* Charts */ = {
-			isa = PBXGroup;
-			children = (
-				FB61BB2218DFADD300D70F47 /* Area2D.swf */,
-				FB61BB2318DFADD300D70F47 /* Bar2D.swf */,
-				FB61BB2418DFADD300D70F47 /* Bubble.swf */,
-				FB61BB2518DFADD300D70F47 /* Column2D.swf */,
-				FB61BB2618DFADD300D70F47 /* Column3D.swf */,
-				FB61BB2718DFADD300D70F47 /* Data.xml */,
-				FB61BB2818DFADD300D70F47 /* Doughnut2D.swf */,
-				FB61BB2918DFADD300D70F47 /* Doughnut3D.swf */,
-				FB61BB2A18DFADD300D70F47 /* FCExporter.swf */,
-				FB61BB2B18DFADD300D70F47 /* firebug-lite.js */,
-				FB61BB2C18DFADD300D70F47 /* FusionCharts.HC.Charts.js */,
-				FB61BB2D18DFADD300D70F47 /* FusionCharts.HC.js */,
-				FB61BB2E18DFADD300D70F47 /* FusionCharts.jqueryplugin.js */,
-				FB61BB2F18DFADD300D70F47 /* FusionCharts.js */,
-				FB61BB3018DFADD300D70F47 /* FusionChartsExportComponent.js */,
-				FB61BB3118DFADD300D70F47 /* jquery.min.js */,
-				FB61BB3218DFADD300D70F47 /* Line.swf */,
-				FB61BB3318DFADD300D70F47 /* Marimekko.swf */,
-				FB61BB3418DFADD300D70F47 /* MSArea.swf */,
-				FB61BB3518DFADD300D70F47 /* MSBar2D.swf */,
-				FB61BB3618DFADD300D70F47 /* MSBar3D.swf */,
-				FB61BB3718DFADD300D70F47 /* MSColumn2D.swf */,
-				FB61BB3818DFADD300D70F47 /* MSColumn3D.swf */,
-				FB61BB3918DFADD300D70F47 /* MSColumn3DLineDY.swf */,
-				FB61BB3A18DFADD300D70F47 /* MSColumnLine3D.swf */,
-				FB61BB3B18DFADD300D70F47 /* MSCombi2D.swf */,
-				FB61BB3C18DFADD300D70F47 /* MSCombi3D.swf */,
-				FB61BB3D18DFADD300D70F47 /* MSCombiDY2D.swf */,
-				FB61BB3E18DFADD300D70F47 /* MSLine.swf */,
-				FB61BB3F18DFADD300D70F47 /* MSStackedColumn2D.swf */,
-				FB61BB4018DFADD300D70F47 /* MSStackedColumn2DLineDY.swf */,
-				FB61BB4118DFADD300D70F47 /* Pareto2D.swf */,
-				FB61BB4218DFADD300D70F47 /* Pareto3D.swf */,
-				FB61BB4318DFADD300D70F47 /* Pie2D.swf */,
-				FB61BB4418DFADD300D70F47 /* Pie3D.swf */,
-				FB61BB4518DFADD300D70F47 /* Scatter.swf */,
-				FB61BB4618DFADD300D70F47 /* ScrollArea2D.swf */,
-				FB61BB4718DFADD300D70F47 /* ScrollColumn2D.swf */,
-				FB61BB4818DFADD300D70F47 /* ScrollCombi2D.swf */,
-				FB61BB4918DFADD300D70F47 /* ScrollCombiDY2D.swf */,
-				FB61BB4A18DFADD300D70F47 /* ScrollLine2D.swf */,
-				FB61BB4B18DFADD300D70F47 /* ScrollStackedColumn2D.swf */,
-				FB61BB4C18DFADD300D70F47 /* SSGrid.swf */,
-				FB61BB4D18DFADD300D70F47 /* StackedArea2D.swf */,
-				FB61BB4E18DFADD300D70F47 /* StackedBar2D.swf */,
-				FB61BB4F18DFADD300D70F47 /* StackedBar3D.swf */,
-				FB61BB5018DFADD300D70F47 /* StackedColumn2D.swf */,
-				FB61BB5118DFADD300D70F47 /* StackedColumn2DLine.swf */,
-				FB61BB5218DFADD300D70F47 /* StackedColumn3D.swf */,
-				FB61BB5318DFADD300D70F47 /* StackedColumn3DLine.swf */,
-				FB61BB5418DFADD300D70F47 /* StackedColumn3DLineDY.swf */,
-				FB61BB5518DFADD300D70F47 /* ZoomLine.swf */,
-			);
-			path = Charts;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -371,65 +223,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB61BB8518DFADD300D70F47 /* StackedColumn2DLine.swf in Resources */,
-				FB61BB5C18DFADD300D70F47 /* Doughnut2D.swf in Resources */,
 				B918253F148D762600D6064E /* InfoPlist.strings in Resources */,
-				FB61BB5918DFADD300D70F47 /* Column2D.swf in Resources */,
-				FB61BB6718DFADD300D70F47 /* Marimekko.swf in Resources */,
-				FB61BB5D18DFADD300D70F47 /* Doughnut3D.swf in Resources */,
-				FB61BB7F18DFADD300D70F47 /* ScrollStackedColumn2D.swf in Resources */,
-				FB61BB8618DFADD300D70F47 /* StackedColumn3D.swf in Resources */,
 				B9182548148D762600D6064E /* MainStoryboard.storyboard in Resources */,
-				FB61BB7A18DFADD300D70F47 /* ScrollArea2D.swf in Resources */,
 				B9C383731491694000CFD0B5 /* Icon-114.png in Resources */,
-				FB61BB7818DFADD300D70F47 /* Pie3D.swf in Resources */,
-				FB61BB7218DFADD300D70F47 /* MSLine.swf in Resources */,
-				FB61BB5B18DFADD300D70F47 /* Data.xml in Resources */,
-				FB61BB6B18DFADD300D70F47 /* MSColumn2D.swf in Resources */,
-				FB61BB8118DFADD300D70F47 /* StackedArea2D.swf in Resources */,
 				B9C383761491694300CFD0B5 /* Icon-57.png in Resources */,
-				FB61BB7518DFADD300D70F47 /* Pareto2D.swf in Resources */,
-				FB61BB7418DFADD300D70F47 /* MSStackedColumn2DLineDY.swf in Resources */,
-				FB61BB7718DFADD300D70F47 /* Pie2D.swf in Resources */,
 				B9C383781491694800CFD0B5 /* Default@2x.png in Resources */,
 				FB10259618BE8C1A003FDB32 /* Default-568h@2x.png in Resources */,
-				FB61BB6C18DFADD300D70F47 /* MSColumn3D.swf in Resources */,
-				FB61BB6818DFADD300D70F47 /* MSArea.swf in Resources */,
-				FB61BB6918DFADD300D70F47 /* MSBar2D.swf in Resources */,
-				FB61BB8218DFADD300D70F47 /* StackedBar2D.swf in Resources */,
-				FB61BB5A18DFADD300D70F47 /* Column3D.swf in Resources */,
-				FB61BB8718DFADD300D70F47 /* StackedColumn3DLine.swf in Resources */,
-				FB61BB5818DFADD300D70F47 /* Bubble.swf in Resources */,
-				FB61BB7B18DFADD300D70F47 /* ScrollColumn2D.swf in Resources */,
-				FB61BB7C18DFADD300D70F47 /* ScrollCombi2D.swf in Resources */,
-				FB61BB6F18DFADD300D70F47 /* MSCombi2D.swf in Resources */,
-				FB61BB7918DFADD300D70F47 /* Scatter.swf in Resources */,
-				FB61BB6A18DFADD300D70F47 /* MSBar3D.swf in Resources */,
-				FB61BB8418DFADD300D70F47 /* StackedColumn2D.swf in Resources */,
-				FB61BB6E18DFADD300D70F47 /* MSColumnLine3D.swf in Resources */,
-				FB61BB7D18DFADD300D70F47 /* ScrollCombiDY2D.swf in Resources */,
-				FB61BB6618DFADD300D70F47 /* Line.swf in Resources */,
-				FB61BB7318DFADD300D70F47 /* MSStackedColumn2D.swf in Resources */,
-				FB61BB8918DFADD300D70F47 /* ZoomLine.swf in Resources */,
+				FB61BC5C18DFCE8C00D70F47 /* Data.xml in Resources */,
 				B9ADCFD51497DA600098522D /* ReadMe.txt in Resources */,
-				FB61BB6D18DFADD300D70F47 /* MSColumn3DLineDY.swf in Resources */,
-				FB61BB7018DFADD300D70F47 /* MSCombi3D.swf in Resources */,
-				FB61BB5718DFADD300D70F47 /* Bar2D.swf in Resources */,
-				FB61BB8818DFADD300D70F47 /* StackedColumn3DLineDY.swf in Resources */,
-				FB61BB7618DFADD300D70F47 /* Pareto3D.swf in Resources */,
-				FB61BB5E18DFADD300D70F47 /* FCExporter.swf in Resources */,
-				FB61BB7E18DFADD300D70F47 /* ScrollLine2D.swf in Resources */,
-				FB61BB8018DFADD300D70F47 /* SSGrid.swf in Resources */,
-				FB61BB8318DFADD300D70F47 /* StackedBar3D.swf in Resources */,
-				FB61BB7118DFADD300D70F47 /* MSCombiDY2D.swf in Resources */,
-				FB61BB5618DFADD300D70F47 /* Area2D.swf in Resources */,
-				FB61BB6018DFADD300D70F47 /* FusionCharts.HC.Charts.js in Resources */,
-				FB61BB6218DFADD300D70F47 /* FusionCharts.jqueryplugin.js in Resources */,
-				FB61BB6418DFADD300D70F47 /* FusionChartsExportComponent.js in Resources */,
-				FB61BB6318DFADD300D70F47 /* FusionCharts.js in Resources */,
-				FB61BB5F18DFADD300D70F47 /* firebug-lite.js in Resources */,
-				FB61BB6518DFADD300D70F47 /* jquery.min.js in Resources */,
-				FB61BB6118DFADD300D70F47 /* FusionCharts.HC.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,10 +242,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB26179018DF9B6600CD7044 /* ViewController.m in Sources */,
+				FB61BC3218DFCE8C00D70F47 /* FusionCharts.HC.Charts.js in Sources */,
 				B9182541148D762600D6064E /* main.m in Sources */,
+				FB61BC3418DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js in Sources */,
 				B9182545148D762600D6064E /* AppDelegate.m in Sources */,
+				FB61BC3318DFCE8C00D70F47 /* FusionCharts.HC.js in Sources */,
 				B9182557148D79D600D6064E /* LeDiscovery.m in Sources */,
+				FB61BC3618DFCE8C00D70F47 /* FusionChartsExportComponent.js in Sources */,
+				FB61BC3518DFCE8C00D70F47 /* FusionCharts.js in Sources */,
 				FB61BB8C18DFAE7F00D70F47 /* HeightGraphViewController.m in Sources */,
+				FB61BC3118DFCE8C00D70F47 /* firebug-lite.js in Sources */,
+				FB61BC3718DFCE8C00D70F47 /* jquery.min.js in Sources */,
 				B9182558148D79D600D6064E /* LeTemperatureAlarmService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +344,7 @@
 		B918254F148D762600D6064E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TemperatureSensor/TemperatureSensor-Prefix.pch";
@@ -554,7 +363,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "Putting Analyzer";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos7.1;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -563,6 +372,7 @@
 		B9182550148D762600D6064E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TemperatureSensor/TemperatureSensor-Prefix.pch";
@@ -581,7 +391,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "Putting Analyzer";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos7.1;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

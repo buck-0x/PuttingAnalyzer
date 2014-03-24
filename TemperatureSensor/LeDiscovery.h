@@ -79,8 +79,8 @@
 /****************************************************************************/
 /*								UI controls									*/
 /****************************************************************************/
-@property (nonatomic, assign) id<LeDiscoveryDelegate>   discoveryDelegate;
-@property (nonatomic, assign) id<StrokeDataProtocol>	peripheralDelegate;
+@property (nonatomic, weak) id<LeDiscoveryDelegate>   discoveryDelegate;
+@property (nonatomic, weak) id<StrokeDataProtocol>	peripheralDelegate;
 
 
 /****************************************************************************/
@@ -96,6 +96,6 @@
 /****************************************************************************/
 /*							Access to the devices							*/
 /****************************************************************************/
-@property (retain, nonatomic) NSMutableArray    *foundPeripherals;
-@property (retain, nonatomic) NSMutableArray	*connectedServices;	// Array
+@property (strong, nonatomic) NSMutableArray    *foundPeripherals;
+@property (strong, nonatomic) NSMutableArray	*connectedServices;	// Array
 @end
