@@ -19,6 +19,8 @@
 	<dict>
 		<key>8FD6BA61-314C-43C9-B6BD-1E68E5EF4B6B</key>
 		<string>../..</string>
+		<key>919AC97E-87AA-415B-BB9D-E80638CDFD25</key>
+		<string>../../../../../Downloads/CorePlotDemo</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/redthrawn/TemperatureSensor.git</string>
@@ -28,6 +30,14 @@
 	<string>8FD6BA61-314C-43C9-B6BD-1E68E5EF4B6B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>919AC97E-87AA-415B-BB9D-E80638CDFD25</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CorePlotDemo</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
