@@ -147,19 +147,6 @@
 - (void) dealloc 
 {
     [[LeDiscovery sharedInstance] stopScanning];
-    
-    [currentTemperatureLabel release];
-    [maxAlarmLabel release];
-    [minAlarmLabel release];
-    [sensorsTable release];
-    [maxAlarmStepper release];
-    [minAlarmStepper release];
-    
-    [currentlyConnectedSensor release];
-    [connectedServices release];
-    [currentlyDisplayingService release];
-    
-    [super dealloc];
 }
 
 
@@ -227,7 +214,6 @@
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
-    [alertView release];
 }
 
 
@@ -309,7 +295,7 @@
     
 	cell = [tableView dequeueReusableCellWithIdentifier:cellID];
 	if (!cell)
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
     
 	if ([indexPath section] == 0) {
 		devices = [[LeDiscovery sharedInstance] connectedServices];
@@ -377,12 +363,10 @@
 	else {
         
         if ( currentlyDisplayingService != nil ) {
-            [currentlyDisplayingService release];
             currentlyDisplayingService = nil;
         }
         
         currentlyDisplayingService = [self serviceForPeripheral:peripheral];
-        [currentlyDisplayingService retain];
         
         [currentlyConnectedSensor setText:[peripheral name]];
         
@@ -414,7 +398,6 @@
     NSString *message   = @"You must turn on Bluetooth in Settings in order to use LE";
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
-    [alertView release];
 }
 
 
