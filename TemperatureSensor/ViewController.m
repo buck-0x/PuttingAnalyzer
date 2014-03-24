@@ -147,6 +147,7 @@
 - (void) dealloc 
 {
     [[LeDiscovery sharedInstance] stopScanning];
+    [super dealloc] ;
 }
 
 
@@ -232,8 +233,10 @@
     
     NSInteger currentTemperature = (int)[service temperature];
     //NSString *currentTemperature = (NSString *)[service temperature];
+    [heightValues addObject:[NSNumber numberWithInt:currentTemperature]];
     [currentTemperatureLabel setText:[NSString stringWithFormat:@"%d", currentTemperature]];
     //[currentTemperatureLabel setText:[NSString stringWithFormat:@"%s", currentTemperature]];
+    NSLog(@"%@", heightValues);
 }
 
 
