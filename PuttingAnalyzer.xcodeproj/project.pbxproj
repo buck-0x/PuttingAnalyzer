@@ -15,7 +15,7 @@
 		B9182545148D762600D6064E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9182544148D762600D6064E /* AppDelegate.m */; };
 		B9182548148D762600D6064E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9182546148D762600D6064E /* MainStoryboard.storyboard */; };
 		B9182557148D79D600D6064E /* LeDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = B9182554148D79D600D6064E /* LeDiscovery.m */; };
-		B9182558148D79D600D6064E /* LeTemperatureAlarmService.m in Sources */ = {isa = PBXBuildFile; fileRef = B9182556148D79D600D6064E /* LeTemperatureAlarmService.m */; };
+		B9182558148D79D600D6064E /* LeStrokeDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = B9182556148D79D600D6064E /* LeStrokeDataService.m */; };
 		B9ADCFD51497DA600098522D /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9ADCFD41497DA600098522D /* ReadMe.txt */; };
 		B9C383731491694000CFD0B5 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C383721491694000CFD0B5 /* Icon-114.png */; };
 		B9C383761491694300CFD0B5 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C383751491694300CFD0B5 /* Icon-57.png */; };
@@ -23,14 +23,13 @@
 		FB10259618BE8C1A003FDB32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */; };
 		FB26179018DF9B6600CD7044 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB26178F18DF9B6600CD7044 /* ViewController.m */; };
 		FB61BB8C18DFAE7F00D70F47 /* HeightGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB61BB8B18DFAE7F00D70F47 /* HeightGraphViewController.m */; };
-		FB61BC3118DFCE8C00D70F47 /* firebug-lite.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */; };
-		FB61BC3218DFCE8C00D70F47 /* FusionCharts.HC.Charts.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */; };
-		FB61BC3318DFCE8C00D70F47 /* FusionCharts.HC.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */; };
-		FB61BC3418DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */; };
-		FB61BC3518DFCE8C00D70F47 /* FusionCharts.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */; };
-		FB61BC3618DFCE8C00D70F47 /* FusionChartsExportComponent.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */; };
-		FB61BC3718DFCE8C00D70F47 /* jquery.min.js in Sources */ = {isa = PBXBuildFile; fileRef = FB61BC0318DFCE8C00D70F47 /* jquery.min.js */; };
-		FB61BC5C18DFCE8C00D70F47 /* Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = FB61BC2818DFCE8C00D70F47 /* Data.xml */; };
+		FB61BC3118DFCE8C00D70F47 /* firebug-lite.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */; };
+		FB61BC3218DFCE8C00D70F47 /* FusionCharts.HC.Charts.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */; };
+		FB61BC3318DFCE8C00D70F47 /* FusionCharts.HC.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */; };
+		FB61BC3418DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */; };
+		FB61BC3518DFCE8C00D70F47 /* FusionCharts.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */; };
+		FB61BC3618DFCE8C00D70F47 /* FusionChartsExportComponent.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */; };
+		FB61BC3718DFCE8C00D70F47 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BC0318DFCE8C00D70F47 /* jquery.min.js */; };
 		FBB0353C18C9041400D0FF28 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB0353B18C9041400D0FF28 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,34 +38,33 @@
 		B9182534148D762600D6064E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B9182536148D762600D6064E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9182538148D762600D6064E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B918253C148D762600D6064E /* TemperatureSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TemperatureSensor-Info.plist"; sourceTree = "<group>"; };
+		B918253C148D762600D6064E /* PuttingAnalyzer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PuttingAnalyzer-Info.plist"; sourceTree = "<group>"; };
 		B918253E148D762600D6064E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B9182540148D762600D6064E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B9182542148D762600D6064E /* TemperatureSensor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TemperatureSensor-Prefix.pch"; sourceTree = "<group>"; };
+		B9182542148D762600D6064E /* PuttingAnalyzer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PuttingAnalyzer-Prefix.pch"; sourceTree = "<group>"; };
 		B9182543148D762600D6064E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9182544148D762600D6064E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9182547148D762600D6064E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B9182553148D79D600D6064E /* LeDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeDiscovery.h; sourceTree = "<group>"; };
 		B9182554148D79D600D6064E /* LeDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeDiscovery.m; sourceTree = "<group>"; };
-		B9182555148D79D600D6064E /* LeTemperatureAlarmService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeTemperatureAlarmService.h; sourceTree = "<group>"; };
-		B9182556148D79D600D6064E /* LeTemperatureAlarmService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeTemperatureAlarmService.m; sourceTree = "<group>"; };
+		B9182555148D79D600D6064E /* LeStrokeDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeStrokeDataService.h; sourceTree = "<group>"; };
+		B9182556148D79D600D6064E /* LeStrokeDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeStrokeDataService.m; sourceTree = "<group>"; };
 		B9ADCFD41497DA600098522D /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		B9C383721491694000CFD0B5 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-114.png"; path = "../Icon-114.png"; sourceTree = "<group>"; };
 		B9C383751491694300CFD0B5 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-57.png"; path = "../Icon-57.png"; sourceTree = "<group>"; };
 		B9C383771491694800CFD0B5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB26178E18DF9B6600CD7044 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FB26178F18DF9B6600CD7044 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FB61BB8A18DFAE7F00D70F47 /* HeightGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightGraphViewController.h; sourceTree = "<group>"; };
 		FB61BB8B18DFAE7F00D70F47 /* HeightGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightGraphViewController.m; sourceTree = "<group>"; };
-		FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "firebug-lite.js"; sourceTree = "<group>"; };
-		FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.HC.Charts.js; sourceTree = "<group>"; };
-		FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.HC.js; sourceTree = "<group>"; };
-		FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.jqueryplugin.js; sourceTree = "<group>"; };
-		FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionCharts.js; sourceTree = "<group>"; };
-		FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FusionChartsExportComponent.js; sourceTree = "<group>"; };
-		FB61BC0318DFCE8C00D70F47 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
-		FB61BC2818DFCE8C00D70F47 /* Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Data.xml; sourceTree = "<group>"; };
+		FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "firebug-lite.js"; path = "../firebug-lite.js"; sourceTree = "<group>"; };
+		FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionCharts.HC.Charts.js; path = ../FusionCharts.HC.Charts.js; sourceTree = "<group>"; };
+		FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionCharts.HC.js; path = ../FusionCharts.HC.js; sourceTree = "<group>"; };
+		FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionCharts.jqueryplugin.js; path = ../FusionCharts.jqueryplugin.js; sourceTree = "<group>"; };
+		FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionCharts.js; path = ../FusionCharts.js; sourceTree = "<group>"; };
+		FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionChartsExportComponent.js; path = ../FusionChartsExportComponent.js; sourceTree = "<group>"; };
+		FB61BC0318DFCE8C00D70F47 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = ../jquery.min.js; sourceTree = "<group>"; };
 		FBB0353B18C9041400D0FF28 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -88,15 +86,6 @@
 		B9182525148D762500D6064E = {
 			isa = PBXGroup;
 			children = (
-				FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */,
-				FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */,
-				FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */,
-				FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */,
-				FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */,
-				FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */,
-				FB61BC0318DFCE8C00D70F47 /* jquery.min.js */,
-				FB61BC2818DFCE8C00D70F47 /* Data.xml */,
-				FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */,
 				B9ADCFD41497DA600098522D /* ReadMe.txt */,
 				B918253A148D762600D6064E /* TemperatureSensor */,
 				B9182533148D762600D6064E /* Frameworks */,
@@ -141,15 +130,17 @@
 		B918253B148D762600D6064E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FBE9E99318EF68E400081293 /* FusionCharts */,
 				B9182543148D762600D6064E /* AppDelegate.h */,
+				FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */,
 				B9182544148D762600D6064E /* AppDelegate.m */,
 				B9C383771491694800CFD0B5 /* Default@2x.png */,
 				B9C383751491694300CFD0B5 /* Icon-57.png */,
 				B9C383721491694000CFD0B5 /* Icon-114.png */,
-				B918253C148D762600D6064E /* TemperatureSensor-Info.plist */,
+				B918253C148D762600D6064E /* PuttingAnalyzer-Info.plist */,
 				B918253D148D762600D6064E /* InfoPlist.strings */,
 				B9182540148D762600D6064E /* main.m */,
-				B9182542148D762600D6064E /* TemperatureSensor-Prefix.pch */,
+				B9182542148D762600D6064E /* PuttingAnalyzer-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -159,8 +150,8 @@
 			children = (
 				B9182553148D79D600D6064E /* LeDiscovery.h */,
 				B9182554148D79D600D6064E /* LeDiscovery.m */,
-				B9182555148D79D600D6064E /* LeTemperatureAlarmService.h */,
-				B9182556148D79D600D6064E /* LeTemperatureAlarmService.m */,
+				B9182555148D79D600D6064E /* LeStrokeDataService.h */,
+				B9182556148D79D600D6064E /* LeStrokeDataService.m */,
 			);
 			name = LE;
 			sourceTree = "<group>";
@@ -172,12 +163,26 @@
 			name = iPad;
 			sourceTree = "<group>";
 		};
+		FBE9E99318EF68E400081293 /* FusionCharts */ = {
+			isa = PBXGroup;
+			children = (
+				FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */,
+				FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */,
+				FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */,
+				FB61BC0018DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js */,
+				FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */,
+				FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */,
+				FB61BC0318DFCE8C00D70F47 /* jquery.min.js */,
+			);
+			name = FusionCharts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B918252F148D762600D6064E /* TemperatureSensor */ = {
+		B918252F148D762600D6064E /* PuttingAnalyzer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B918254E148D762600D6064E /* Build configuration list for PBXNativeTarget "TemperatureSensor" */;
+			buildConfigurationList = B918254E148D762600D6064E /* Build configuration list for PBXNativeTarget "PuttingAnalyzer" */;
 			buildPhases = (
 				B918252C148D762600D6064E /* Sources */,
 				B918252D148D762600D6064E /* Frameworks */,
@@ -187,7 +192,7 @@
 			);
 			dependencies = (
 			);
-			name = TemperatureSensor;
+			name = PuttingAnalyzer;
 			productName = TemperatureSensor;
 			productReference = B9182530148D762600D6064E /* Putting Analyzer.app */;
 			productType = "com.apple.product-type.application";
@@ -201,7 +206,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Apple Inc.";
 			};
-			buildConfigurationList = B918252A148D762500D6064E /* Build configuration list for PBXProject "TemperatureSensor" */;
+			buildConfigurationList = B918252A148D762500D6064E /* Build configuration list for PBXProject "PuttingAnalyzer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,7 +218,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B918252F148D762600D6064E /* TemperatureSensor */,
+				B918252F148D762600D6064E /* PuttingAnalyzer */,
 			);
 		};
 /* End PBXProject section */
@@ -223,13 +228,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB61BC3218DFCE8C00D70F47 /* FusionCharts.HC.Charts.js in Resources */,
+				FB61BC3418DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js in Resources */,
+				FB61BC3318DFCE8C00D70F47 /* FusionCharts.HC.js in Resources */,
+				FB61BC3618DFCE8C00D70F47 /* FusionChartsExportComponent.js in Resources */,
+				FB61BC3518DFCE8C00D70F47 /* FusionCharts.js in Resources */,
+				FB61BC3118DFCE8C00D70F47 /* firebug-lite.js in Resources */,
+				FB61BC3718DFCE8C00D70F47 /* jquery.min.js in Resources */,
 				B918253F148D762600D6064E /* InfoPlist.strings in Resources */,
 				B9182548148D762600D6064E /* MainStoryboard.storyboard in Resources */,
 				B9C383731491694000CFD0B5 /* Icon-114.png in Resources */,
 				B9C383761491694300CFD0B5 /* Icon-57.png in Resources */,
 				B9C383781491694800CFD0B5 /* Default@2x.png in Resources */,
 				FB10259618BE8C1A003FDB32 /* Default-568h@2x.png in Resources */,
-				FB61BC5C18DFCE8C00D70F47 /* Data.xml in Resources */,
 				B9ADCFD51497DA600098522D /* ReadMe.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,18 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB26179018DF9B6600CD7044 /* ViewController.m in Sources */,
-				FB61BC3218DFCE8C00D70F47 /* FusionCharts.HC.Charts.js in Sources */,
 				B9182541148D762600D6064E /* main.m in Sources */,
-				FB61BC3418DFCE8C00D70F47 /* FusionCharts.jqueryplugin.js in Sources */,
 				B9182545148D762600D6064E /* AppDelegate.m in Sources */,
-				FB61BC3318DFCE8C00D70F47 /* FusionCharts.HC.js in Sources */,
 				B9182557148D79D600D6064E /* LeDiscovery.m in Sources */,
-				FB61BC3618DFCE8C00D70F47 /* FusionChartsExportComponent.js in Sources */,
-				FB61BC3518DFCE8C00D70F47 /* FusionCharts.js in Sources */,
 				FB61BB8C18DFAE7F00D70F47 /* HeightGraphViewController.m in Sources */,
-				FB61BC3118DFCE8C00D70F47 /* firebug-lite.js in Sources */,
-				FB61BC3718DFCE8C00D70F47 /* jquery.min.js in Sources */,
-				B9182558148D79D600D6064E /* LeTemperatureAlarmService.m in Sources */,
+				B9182558148D79D600D6064E /* LeStrokeDataService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,13 +351,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TemperatureSensor/TemperatureSensor-Prefix.pch";
+				GCC_PREFIX_HEADER = "TemperatureSensor/PuttingAnalyzer-Prefix.pch";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				INFOPLIST_FILE = "TemperatureSensor/TemperatureSensor-Info.plist";
+				INFOPLIST_FILE = "TemperatureSensor/PuttingAnalyzer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,13 +379,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TemperatureSensor/TemperatureSensor-Prefix.pch";
+				GCC_PREFIX_HEADER = "TemperatureSensor/PuttingAnalyzer-Prefix.pch";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				INFOPLIST_FILE = "TemperatureSensor/TemperatureSensor-Info.plist";
+				INFOPLIST_FILE = "TemperatureSensor/PuttingAnalyzer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,7 +404,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B918252A148D762500D6064E /* Build configuration list for PBXProject "TemperatureSensor" */ = {
+		B918252A148D762500D6064E /* Build configuration list for PBXProject "PuttingAnalyzer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B918254C148D762600D6064E /* Debug */,
@@ -409,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B918254E148D762600D6064E /* Build configuration list for PBXNativeTarget "TemperatureSensor" */ = {
+		B918254E148D762600D6064E /* Build configuration list for PBXNativeTarget "PuttingAnalyzer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B918254F148D762600D6064E /* Debug */,
