@@ -1,5 +1,12 @@
-#import "LeDiscovery.h"
+/*
+ *  LeDiscovery.m
+ *  PuttingAnalyzer
+ *
+ *  Created by Bradley Weiers on Jan 6, 2014.
+ *  Copyright University of Saskatchewan. All rights reserved.
+ */
 
+#import "LeDiscovery.h"
 
 @interface LeDiscovery () <CBCentralManagerDelegate, CBPeripheralDelegate> {
 	CBCentralManager    *centralManager;

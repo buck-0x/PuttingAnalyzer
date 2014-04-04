@@ -1,9 +1,15 @@
+/*
+ *  LeDiscovery.h
+ *  PuttingAnalyzer
+ *
+ *  Created by Bradley Weiers on Jan 6, 2014.
+ *  Copyright University of Saskatchewan. All rights reserved.
+ */
+
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
 #import "LeStrokeDataService.h"
-
-
 
 /****************************************************************************/
 /*							UI protocols									*/
@@ -26,8 +32,8 @@
 /****************************************************************************/
 /*								UI controls									*/
 /****************************************************************************/
-@property (nonatomic, weak) id<LeDiscoveryDelegate>   discoveryDelegate;
-@property (nonatomic, weak) id<StrokeDataProtocol>	peripheralDelegate;
+@property (nonatomic, weak) id<LeDiscoveryDelegate> discoveryDelegate;
+@property (nonatomic, weak) id<StrokeDataProtocol> peripheralDelegate;
 
 
 /****************************************************************************/

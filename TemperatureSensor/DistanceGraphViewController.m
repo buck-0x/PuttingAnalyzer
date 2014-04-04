@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Apple Inc. All rights reserved.
 //
 
-#import "HeightGraphViewController.h"
+#import "DistanceGraphViewController.h"
 
-@implementation HeightGraphViewController
+@implementation DistanceGraphViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.heightValues = [NSMutableArray arrayWithObjects:@1,@2,@3,nil];
+    //self.heightValues = [NSMutableArray arrayWithObjects:@1,@2,@3,nil];
     
     self.currentOrientation = self.interfaceOrientation;
     [self createChartData:self.currentOrientation];

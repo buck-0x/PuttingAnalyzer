@@ -4,19 +4,6 @@
 
 @implementation ViewController
 
-
-//@synthesize currentlyDisplayingService;
-//@synthesize connectedServices;
-//@synthesize currentlyConnectedSensor;
-//@synthesize sensorsTable;
-//@synthesize currentTemperatureLabel;
-//@synthesize maxAlarmLabel,minAlarmLabel;
-//@synthesize maxAlarmStepper,minAlarmStepper;
-//
-//@synthesize heightValues;
-
-
-
 #pragma mark -
 #pragma mark View lifecycle
 /****************************************************************************/
@@ -36,8 +23,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackgroundNotification:) name:kStrokeDataServiceEnteredBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForegroundNotification:) name:kStrokeDataServiceEnteredForegroundNotification object:nil];
     
-    _maxAlarmLabel.hidden = YES;
-    _minAlarmLabel.hidden = YES;
+//    _maxAlarmLabel.hidden = YES;
+//    _minAlarmLabel.hidden = YES;
     //_maxAlarmStepper.hidden = YES;
     //_minAlarmStepper.hidden = YES;
     
@@ -48,7 +35,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    HeightGraphViewController *transferViewController = segue.destinationViewController;
+    DistanceGraphViewController *transferViewController = segue.destinationViewController;
     transferViewController.heightValues = self.heightValues;
 
 }
@@ -57,9 +44,9 @@
 - (void) viewDidUnload
 {
     [self setCurrentlyConnectedSensor:nil];
-    [self setCurrentTemperatureLabel:nil];
-    [self setMaxAlarmLabel:nil];
-    [self setMinAlarmLabel:nil];
+    [self setCurrentDistanceLabel:nil];
+//    [self setMaxAlarmLabel:nil];
+//    [self setMinAlarmLabel:nil];
     [self setSensorsTable:nil];
 //    [self setMaxAlarmStepper:nil];
 //    [self setMinAlarmStepper:nil];
@@ -125,31 +112,31 @@
 /*				LeTemperatureAlarmProtocol Delegate Methods					*/
 /****************************************************************************/
 /** Broke the high or low temperature bound */
-- (void) alarmService:(LeStrokeDataService*)service didSoundAlarmOfType:(AlarmType)alarm
-{
-    if (![service isEqual:_currentlyDisplayingService])
-        return;
-    
-    NSString *title;
-    NSString *message;
-    
-	switch (alarm) {
-		case kAlarmLow: 
-			NSLog(@"Alarm low");
-            title     = @"Alarm Notification";
-            message   = @"Low Alarm Fired";
-			break;
-            
-		case kAlarmHigh: 
-			NSLog(@"Alarm high");
-            title     = @"Alarm Notification";
-            message   = @"High Alarm Fired";
-			break;
-	}
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
-}
+//- (void) alarmService:(LeStrokeDataService*)service didSoundAlarmOfType:(AlarmType)alarm
+//{
+//    if (![service isEqual:_currentlyDisplayingService])
+//        return;
+//    
+//    NSString *title;
+//    NSString *message;
+//    
+//	switch (alarm) {
+//		case kAlarmLow: 
+//			NSLog(@"Alarm low");
+//            title     = @"Alarm Notification";
+//            message   = @"Low Alarm Fired";
+//			break;
+//            
+//		case kAlarmHigh: 
+//			NSLog(@"Alarm high");
+//            title     = @"Alarm Notification";
+//            message   = @"High Alarm Fired";
+//			break;
+//	}
+//    
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    [alertView show];
+//}
 
 
 /** Back into normal values */
@@ -165,10 +152,10 @@
     if (service != _currentlyDisplayingService)
         return;
     
-    NSInteger currentTemperature = (int)[service temperature];
+    NSInteger currentTemperature = (int)[service distance];
     //NSString *currentTemperature = (NSString *)[service temperature];
     [_heightValues addObject:[NSNumber numberWithInt:currentTemperature]];
-    [_currentTemperatureLabel setText:[NSString stringWithFormat:@"%d", currentTemperature]];
+    [_currentDistanceLabel setText:[NSString stringWithFormat:@"%d", currentTemperature]];
     //[currentTemperatureLabel setText:[NSString stringWithFormat:@"%s", currentTemperature]];
     //NSLog(@"%@", heightValues);
 }
@@ -180,9 +167,9 @@
     if (service != _currentlyDisplayingService) 
         return;
     
-    [_maxAlarmLabel setText:[NSString stringWithFormat:@"MAX %dº", (int)[_currentlyDisplayingService maximumTemperature]]];
-    [_minAlarmLabel setText:[NSString stringWithFormat:@"MIN %dº", (int)[_currentlyDisplayingService minimumTemperature]]];
-//    
+//    [_maxAlarmLabel setText:[NSString stringWithFormat:@"MAX %dº", (int)[_currentlyDisplayingService maximumTemperature]]];
+//    [_minAlarmLabel setText:[NSString stringWithFormat:@"MIN %dº", (int)[_currentlyDisplayingService minimumTemperature]]];
+//
 //    [_maxAlarmStepper setEnabled:YES];
 //    [_minAlarmStepper setEnabled:YES];
     
@@ -292,9 +279,9 @@
         [_currentlyConnectedSensor setText:[peripheral name]];
         
         [_currentlyConnectedSensor setEnabled:NO];
-        [_currentTemperatureLabel setEnabled:NO];
-        [_maxAlarmLabel setEnabled:NO];
-        [_minAlarmLabel setEnabled:NO];
+        [_currentDistanceLabel setEnabled:NO];
+//        [_maxAlarmLabel setEnabled:NO];
+//        [_minAlarmLabel setEnabled:NO];
     }
     
 	else {
@@ -307,14 +294,14 @@
         
         [_currentlyConnectedSensor setText:[peripheral name]];
         
-        [_currentTemperatureLabel setText:[NSString stringWithFormat:@"%d", (int)[_currentlyDisplayingService temperature]]];
-        [_maxAlarmLabel setText:[NSString stringWithFormat:@"MAX %dº", (int)[_currentlyDisplayingService maximumTemperature]]];
-        [_minAlarmLabel setText:[NSString stringWithFormat:@"MIN %dº", (int)[_currentlyDisplayingService minimumTemperature]]];
+        [_currentDistanceLabel setText:[NSString stringWithFormat:@"%d", (int)[_currentlyDisplayingService distance]]];
+//        [_maxAlarmLabel setText:[NSString stringWithFormat:@"MAX %dº", (int)[_currentlyDisplayingService maximumTemperature]]];
+//        [_minAlarmLabel setText:[NSString stringWithFormat:@"MIN %dº", (int)[_currentlyDisplayingService minimumTemperature]]];
         
         [_currentlyConnectedSensor setEnabled:YES];
-        [_currentTemperatureLabel setEnabled:YES];
-        [_maxAlarmLabel setEnabled:YES];
-        [_minAlarmLabel setEnabled:YES];
+        [_currentDistanceLabel setEnabled:YES];
+//        [_maxAlarmLabel setEnabled:YES];
+//        [_minAlarmLabel setEnabled:YES];
     }
 }
 
@@ -393,16 +380,16 @@
 //    [_currentlyDisplayingService writeLowAlarmTemperature:newTemp];
 //}
 
-- (IBAction)startButtonPressed
-{
-    
-    
-}
-
-- (IBAction)stopButtonPressed
-{
-    
-    
-}
+//- (IBAction)startButtonPressed
+//{
+//    
+//    
+//}
+//
+//- (IBAction)stopButtonPressed
+//{
+//    
+//    
+//}
 
 @end

@@ -22,7 +22,7 @@
 		B9C383781491694800CFD0B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C383771491694800CFD0B5 /* Default@2x.png */; };
 		FB10259618BE8C1A003FDB32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */; };
 		FB26179018DF9B6600CD7044 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB26178F18DF9B6600CD7044 /* ViewController.m */; };
-		FB61BB8C18DFAE7F00D70F47 /* HeightGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB61BB8B18DFAE7F00D70F47 /* HeightGraphViewController.m */; };
+		FB61BB8C18DFAE7F00D70F47 /* DistanceGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB61BB8B18DFAE7F00D70F47 /* DistanceGraphViewController.m */; };
 		FB61BC3118DFCE8C00D70F47 /* firebug-lite.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */; };
 		FB61BC3218DFCE8C00D70F47 /* FusionCharts.HC.Charts.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */; };
 		FB61BC3318DFCE8C00D70F47 /* FusionCharts.HC.js in Resources */ = {isa = PBXBuildFile; fileRef = FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */; };
@@ -56,8 +56,8 @@
 		FB10259518BE8C1A003FDB32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		FB26178E18DF9B6600CD7044 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FB26178F18DF9B6600CD7044 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FB61BB8A18DFAE7F00D70F47 /* HeightGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeightGraphViewController.h; sourceTree = "<group>"; };
-		FB61BB8B18DFAE7F00D70F47 /* HeightGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeightGraphViewController.m; sourceTree = "<group>"; };
+		FB61BB8A18DFAE7F00D70F47 /* DistanceGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceGraphViewController.h; sourceTree = "<group>"; };
+		FB61BB8B18DFAE7F00D70F47 /* DistanceGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceGraphViewController.m; sourceTree = "<group>"; };
 		FB61BBFD18DFCE8B00D70F47 /* firebug-lite.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "firebug-lite.js"; path = "../firebug-lite.js"; sourceTree = "<group>"; };
 		FB61BBFE18DFCE8B00D70F47 /* FusionCharts.HC.Charts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionCharts.HC.Charts.js; path = ../FusionCharts.HC.Charts.js; sourceTree = "<group>"; };
 		FB61BBFF18DFCE8B00D70F47 /* FusionCharts.HC.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionCharts.HC.js; path = ../FusionCharts.HC.js; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B9ADCFD41497DA600098522D /* ReadMe.txt */,
-				B918253A148D762600D6064E /* TemperatureSensor */,
+				B918253A148D762600D6064E /* PuttingAnalyzer */,
 				B9182533148D762600D6064E /* Frameworks */,
 				B9182531148D762600D6064E /* Products */,
 			);
@@ -112,18 +112,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B918253A148D762600D6064E /* TemperatureSensor */ = {
+		B918253A148D762600D6064E /* PuttingAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
 				FB26172818DF8CA600CD7044 /* iPad */,
 				B9182552148D79B900D6064E /* LE */,
 				B9182546148D762600D6064E /* MainStoryboard.storyboard */,
-				FB61BB8A18DFAE7F00D70F47 /* HeightGraphViewController.h */,
-				FB61BB8B18DFAE7F00D70F47 /* HeightGraphViewController.m */,
+				FB61BB8A18DFAE7F00D70F47 /* DistanceGraphViewController.h */,
+				FB61BB8B18DFAE7F00D70F47 /* DistanceGraphViewController.m */,
 				FB26178E18DF9B6600CD7044 /* ViewController.h */,
 				FB26178F18DF9B6600CD7044 /* ViewController.m */,
 				B918253B148D762600D6064E /* Supporting Files */,
 			);
+			name = PuttingAnalyzer;
 			path = TemperatureSensor;
 			sourceTree = "<group>";
 		};
@@ -256,7 +257,7 @@
 				B9182541148D762600D6064E /* main.m in Sources */,
 				B9182545148D762600D6064E /* AppDelegate.m in Sources */,
 				B9182557148D79D600D6064E /* LeDiscovery.m in Sources */,
-				FB61BB8C18DFAE7F00D70F47 /* HeightGraphViewController.m in Sources */,
+				FB61BB8C18DFAE7F00D70F47 /* DistanceGraphViewController.m in Sources */,
 				B9182558148D79D600D6064E /* LeStrokeDataService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
