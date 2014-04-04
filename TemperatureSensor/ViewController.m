@@ -1,54 +1,3 @@
-/*
- 
- File: ViewController.m
- 
- Abstract: User interface to display a list of discovered peripherals
- and allow the user to connect to them.
- 
- Version: 1.0
- 
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by 
- Apple Inc. ("Apple") in consideration of your agreement to the
- following terms, and your use, installation, modification or
- redistribution of this Apple software constitutes acceptance of these
- terms.  If you do not agree with these terms, please do not use,
- install, modify or redistribute this Apple software.
- 
- In consideration of your agreement to abide by the following terms, and
- subject to these terms, Apple grants you a personal, non-exclusive
- license, under Apple's copyrights in this original Apple software (the
- "Apple Software"), to use, reproduce, modify and redistribute the Apple
- Software, with or without modifications, in source and/or binary forms;
- provided that if you redistribute the Apple Software in its entirety and
- without modifications, you must retain this notice and the following
- text and disclaimers in all such redistributions of the Apple Software. 
- Neither the name, trademarks, service marks or logos of Apple Inc. 
- may be used to endorse or promote products derived from the Apple
- Software without specific prior written permission from Apple.  Except
- as expressly stated in this notice, no other rights or licenses, express
- or implied, are granted by Apple herein, including but not limited to
- any patent rights that may be infringed by your derivative works or by
- other works in which the Apple Software may be incorporated.
- 
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
- 
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
- POSSIBILITY OF SUCH DAMAGE.
- 
- Copyright (C) 2011 Apple Inc. All Rights Reserved.
- 
- */
-
 #import <Foundation/Foundation.h>
 
 #import "ViewController.h"
@@ -84,13 +33,13 @@
     [[LeDiscovery sharedInstance] setPeripheralDelegate:self];
     [[LeDiscovery sharedInstance] startScanningForUUIDString:kStrokeDataServiceUUIDString];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackgroundNotification:) name:kAlarmServiceEnteredBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForegroundNotification:) name:kAlarmServiceEnteredForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackgroundNotification:) name:kStrokeDataServiceEnteredBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForegroundNotification:) name:kStrokeDataServiceEnteredForegroundNotification object:nil];
     
     _maxAlarmLabel.hidden = YES;
     _minAlarmLabel.hidden = YES;
-    _maxAlarmStepper.hidden = YES;
-    _minAlarmStepper.hidden = YES;
+    //_maxAlarmStepper.hidden = YES;
+    //_minAlarmStepper.hidden = YES;
     
     
     
@@ -112,8 +61,8 @@
     [self setMaxAlarmLabel:nil];
     [self setMinAlarmLabel:nil];
     [self setSensorsTable:nil];
-    [self setMaxAlarmStepper:nil];
-    [self setMinAlarmStepper:nil];
+//    [self setMaxAlarmStepper:nil];
+//    [self setMinAlarmStepper:nil];
     [self setConnectedServices:nil];
     [self setCurrentlyDisplayingService:nil];
     
@@ -142,9 +91,9 @@
 /****************************************************************************/
 /*                  LeTemperatureAlarm Interactions                         */
 /****************************************************************************/
-- (LeTemperatureAlarmService*) serviceForPeripheral:(CBPeripheral *)peripheral
+- (LeStrokeDataService*) serviceForPeripheral:(CBPeripheral *)peripheral
 {
-    for (LeTemperatureAlarmService *service in _connectedServices) {
+    for (LeStrokeDataService *service in _connectedServices) {
         if ( [[service peripheral] isEqual:peripheral] ) {
             return service;
         }
@@ -156,7 +105,7 @@
 - (void)didEnterBackgroundNotification:(NSNotification*)notification
 {   
     NSLog(@"Entered background notification called.");
-    for (LeTemperatureAlarmService *service in self.connectedServices) {
+    for (LeStrokeDataService *service in self.connectedServices) {
         [service enteredBackground];
     }
 }
@@ -164,7 +113,7 @@
 - (void)didEnterForegroundNotification:(NSNotification*)notification
 {
     NSLog(@"Entered foreground notification called.");
-    for (LeTemperatureAlarmService *service in self.connectedServices) {
+    for (LeStrokeDataService *service in self.connectedServices) {
         [service enteredForeground];
     }    
 }
@@ -176,7 +125,7 @@
 /*				LeTemperatureAlarmProtocol Delegate Methods					*/
 /****************************************************************************/
 /** Broke the high or low temperature bound */
-- (void) alarmService:(LeTemperatureAlarmService*)service didSoundAlarmOfType:(AlarmType)alarm
+- (void) alarmService:(LeStrokeDataService*)service didSoundAlarmOfType:(AlarmType)alarm
 {
     if (![service isEqual:_currentlyDisplayingService])
         return;
@@ -204,14 +153,14 @@
 
 
 /** Back into normal values */
-- (void) alarmServiceDidStopAlarm:(LeTemperatureAlarmService*)service
+- (void) alarmServiceDidStopAlarm:(LeStrokeDataService*)service
 {
     NSLog(@"Alarm stopped");
 }
 
 
 /** Current temp changed */
-- (void) alarmServiceDidChangeTemperature:(LeTemperatureAlarmService*)service
+- (void) alarmServiceDidChangeTemperature:(LeStrokeDataService*)service
 {  
     if (service != _currentlyDisplayingService)
         return;
@@ -226,23 +175,23 @@
 
 
 /** Max or Min change request complete */
-- (void) alarmServiceDidChangeTemperatureBounds:(LeTemperatureAlarmService*)service
+- (void) alarmServiceDidChangeTemperatureBounds:(LeStrokeDataService*)service
 {
     if (service != _currentlyDisplayingService) 
         return;
     
     [_maxAlarmLabel setText:[NSString stringWithFormat:@"MAX %dº", (int)[_currentlyDisplayingService maximumTemperature]]];
     [_minAlarmLabel setText:[NSString stringWithFormat:@"MIN %dº", (int)[_currentlyDisplayingService minimumTemperature]]];
-    
-    [_maxAlarmStepper setEnabled:YES];
-    [_minAlarmStepper setEnabled:YES];
+//    
+//    [_maxAlarmStepper setEnabled:YES];
+//    [_minAlarmStepper setEnabled:YES];
     
     
 }
 
 
 /** Peripheral connected or disconnected */
-- (void) alarmServiceDidChangeStatus:(LeTemperatureAlarmService*)service
+- (void) alarmServiceDidChangeStatus:(LeStrokeDataService*)service
 {
     if ( [[service peripheral] isConnected] ) {
         NSLog(@"Service (%@) connected", service.peripheral.name);
@@ -287,7 +236,7 @@
     
 	if ([indexPath section] == 0) {
 		devices = [[LeDiscovery sharedInstance] connectedServices];
-        peripheral = [(LeTemperatureAlarmService*)[devices objectAtIndex:row] peripheral];
+        peripheral = [(LeStrokeDataService*)[devices objectAtIndex:row] peripheral];
         
 	} else {
 		devices = [[LeDiscovery sharedInstance] foundPeripherals];
@@ -332,7 +281,7 @@
 	
 	if ([indexPath section] == 0) {
 		devices = [[LeDiscovery sharedInstance] connectedServices];
-        peripheral = [(LeTemperatureAlarmService*)[devices objectAtIndex:row] peripheral];
+        peripheral = [(LeStrokeDataService*)[devices objectAtIndex:row] peripheral];
 	} else {
 		devices = [[LeDiscovery sharedInstance] foundPeripherals];
     	peripheral = (CBPeripheral*)[devices objectAtIndex:row];
@@ -396,53 +345,53 @@
 /*                              App IO Methods                              */
 /****************************************************************************/
 /** Increase or decrease the maximum alarm setting */
-- (IBAction) maxStepperChanged
-{
-    int newTemp = [_currentlyDisplayingService maximumTemperature] * 10;
-    
-    if (_maxAlarmStepper.value > 0) {
-        newTemp+=10;
-        NSLog(@"increasing MAX temp to %d", newTemp);
-    }
-    
-    if (_maxAlarmStepper.value < 0) {
-        newTemp-=10;
-        NSLog(@"decreasing MAX temp to %d", newTemp);
-    }
-    
-    // We're not interested in the actual VALUE of the stepper, just if it's increased or decreased, so reset it to 0 after a press
-    [_maxAlarmStepper setValue:0];
-    
-    // Disable the stepper so we don't send multiple requests to the peripheral
-    [_maxAlarmStepper setEnabled:NO];
-    
-    [_currentlyDisplayingService writeHighAlarmTemperature:newTemp];
-}
+//- (IBAction) maxStepperChanged
+//{
+//    int newTemp = [_currentlyDisplayingService maximumTemperature] * 10;
+//    
+//    if (_maxAlarmStepper.value > 0) {
+//        newTemp+=10;
+//        NSLog(@"increasing MAX temp to %d", newTemp);
+//    }
+//    
+//    if (_maxAlarmStepper.value < 0) {
+//        newTemp-=10;
+//        NSLog(@"decreasing MAX temp to %d", newTemp);
+//    }
+//    
+//    // We're not interested in the actual VALUE of the stepper, just if it's increased or decreased, so reset it to 0 after a press
+//    [_maxAlarmStepper setValue:0];
+//    
+//    // Disable the stepper so we don't send multiple requests to the peripheral
+//    [_maxAlarmStepper setEnabled:NO];
+//    
+//    [_currentlyDisplayingService writeHighAlarmTemperature:newTemp];
+//}
 
 
 /** Increase or decrease the minimum alarm setting */
-- (IBAction) minStepperChanged
-{
-    int newTemp = [_currentlyDisplayingService minimumTemperature] * 10;
-    
-    if (_minAlarmStepper.value > 0) {
-        newTemp+=10;
-        NSLog(@"increasing MIN temp to %d", newTemp);
-    }
-    
-    if (_minAlarmStepper.value < 0) {
-        newTemp-=10;
-        NSLog(@"decreasing MIN temp to %d", newTemp);
-    }
-    
-    // We're not interested in the actual VALUE of the stepper, just if it's increased or decreased, so reset it to 0 after a press
-    [_minAlarmStepper setValue:0];
-    
-    // Disable the stepper so we don't send multiple requests to the peripheral
-    [_minAlarmStepper setEnabled:NO];
-    
-    [_currentlyDisplayingService writeLowAlarmTemperature:newTemp];
-}
+//- (IBAction) minStepperChanged
+//{
+//    int newTemp = [_currentlyDisplayingService minimumTemperature] * 10;
+//    
+//    if (_minAlarmStepper.value > 0) {
+//        newTemp+=10;
+//        NSLog(@"increasing MIN temp to %d", newTemp);
+//    }
+//    
+//    if (_minAlarmStepper.value < 0) {
+//        newTemp-=10;
+//        NSLog(@"decreasing MIN temp to %d", newTemp);
+//    }
+//    
+//    // We're not interested in the actual VALUE of the stepper, just if it's increased or decreased, so reset it to 0 after a press
+//    [_minAlarmStepper setValue:0];
+//    
+//    // Disable the stepper so we don't send multiple requests to the peripheral
+//    [_minAlarmStepper setEnabled:NO];
+//    
+//    [_currentlyDisplayingService writeLowAlarmTemperature:newTemp];
+//}
 
 - (IBAction)startButtonPressed
 {

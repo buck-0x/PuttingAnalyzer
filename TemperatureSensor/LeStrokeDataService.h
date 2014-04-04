@@ -1,57 +1,3 @@
-/*
- 
- File: LeTemperatureAlarmService.h
- 
- Abstract: Temperature Alarm Service Header - Connect to a peripheral 
- and get notified when the temperature changes and goes past settable
- maximum and minimum temperatures.
- 
- Version: 1.0
- 
- Disclaimer: IMPORTANT:  This Apple software is supplied to you by 
- Apple Inc. ("Apple") in consideration of your agreement to the
- following terms, and your use, installation, modification or
- redistribution of this Apple software constitutes acceptance of these
- terms.  If you do not agree with these terms, please do not use,
- install, modify or redistribute this Apple software.
- 
- In consideration of your agreement to abide by the following terms, and
- subject to these terms, Apple grants you a personal, non-exclusive
- license, under Apple's copyrights in this original Apple software (the
- "Apple Software"), to use, reproduce, modify and redistribute the Apple
- Software, with or without modifications, in source and/or binary forms;
- provided that if you redistribute the Apple Software in its entirety and
- without modifications, you must retain this notice and the following
- text and disclaimers in all such redistributions of the Apple Software. 
- Neither the name, trademarks, service marks or logos of Apple Inc. 
- may be used to endorse or promote products derived from the Apple
- Software without specific prior written permission from Apple.  Except
- as expressly stated in this notice, no other rights or licenses, express
- or implied, are granted by Apple herein, including but not limited to
- any patent rights that may be infringed by your derivative works or by
- other works in which the Apple Software may be incorporated.
- 
- The Apple Software is provided by Apple on an "AS IS" basis.  APPLE
- MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
- THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS
- FOR A PARTICULAR PURPOSE, REGARDING THE APPLE SOFTWARE OR ITS USE AND
- OPERATION ALONE OR IN COMBINATION WITH YOUR PRODUCTS.
- 
- IN NO EVENT SHALL APPLE BE LIABLE FOR ANY SPECIAL, INDIRECT, INCIDENTAL
- OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- INTERRUPTION) ARISING IN ANY WAY OUT OF THE USE, REPRODUCTION,
- MODIFICATION AND/OR DISTRIBUTION OF THE APPLE SOFTWARE, HOWEVER CAUSED
- AND WHETHER UNDER THEORY OF CONTRACT, TORT (INCLUDING NEGLIGENCE),
- STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
- POSSIBILITY OF SUCH DAMAGE.
- 
- Copyright (C) 2011 Apple Inc. All Rights Reserved.
- 
- */
-
-
-
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
@@ -59,19 +5,20 @@
 /****************************************************************************/
 /*						Service Characteristics								*/
 /****************************************************************************/
+// GLOBAL
 extern NSString *kStrokeDataServiceUUIDString;                 // DEADF154-0000-0000-0000-0000DEADF154     Service UUID
 extern NSString *kHeightCharacteristicUUIDString;   // CCCCFFFF-DEAD-F154-1319-740381000000     Current Temperature Characteristic
-extern NSString *kMinimumTemperatureCharacteristicUUIDString;   // C0C0C0C0-DEAD-F154-1319-740381000000     Minimum Temperature Characteristic
-extern NSString *kMaximumTemperatureCharacteristicUUIDString;   // EDEDEDED-DEAD-F154-1319-740381000000     Maximum Temperature Characteristic
-extern NSString *kAlarmCharacteristicUUIDString;                // AAAAAAAA-DEAD-F154-1319-740381000000     Alarm Characteristic
+//extern NSString *kMinimumTemperatureCharacteristicUUIDString;   // C0C0C0C0-DEAD-F154-1319-740381000000     Minimum Temperature Characteristic
+//extern NSString *kMaximumTemperatureCharacteristicUUIDString;   // EDEDEDED-DEAD-F154-1319-740381000000     Maximum Temperature Characteristic
+//extern NSString *kAlarmCharacteristicUUIDString;                // AAAAAAAA-DEAD-F154-1319-740381000000     Alarm Characteristic
 
-extern NSString *kAlarmServiceEnteredBackgroundNotification;
-extern NSString *kAlarmServiceEnteredForegroundNotification;
+extern NSString *kStrokeDataServiceEnteredBackgroundNotification;
+extern NSString *kStrokeDataServiceEnteredForegroundNotification;
 
 /****************************************************************************/
 /*								Protocol									*/
 /****************************************************************************/
-@class LeTemperatureAlarmService;
+@class LeStrokeDataService;
 
 typedef enum {
     kAlarmHigh  = 0,
@@ -79,11 +26,11 @@ typedef enum {
 } AlarmType;
 
 @protocol StrokeDataProtocol<NSObject>
-- (void) alarmService:(LeTemperatureAlarmService*)service didSoundAlarmOfType:(AlarmType)alarm;
-- (void) alarmServiceDidStopAlarm:(LeTemperatureAlarmService*)service;
-- (void) alarmServiceDidChangeTemperature:(LeTemperatureAlarmService*)service;
-- (void) alarmServiceDidChangeTemperatureBounds:(LeTemperatureAlarmService*)service;
-- (void) alarmServiceDidChangeStatus:(LeTemperatureAlarmService*)service;
+- (void) alarmService:(LeStrokeDataService*)service didSoundAlarmOfType:(AlarmType)alarm;
+- (void) alarmServiceDidStopAlarm:(LeStrokeDataService*)service;
+- (void) alarmServiceDidChangeTemperature:(LeStrokeDataService*)service;
+- (void) alarmServiceDidChangeTemperatureBounds:(LeStrokeDataService*)service;
+- (void) alarmServiceDidChangeStatus:(LeStrokeDataService*)service;
 - (void) alarmServiceDidReset;
 @end
 
@@ -91,7 +38,7 @@ typedef enum {
 /****************************************************************************/
 /*						Temperature Alarm service.                          */
 /****************************************************************************/
-@interface LeTemperatureAlarmService : NSObject
+@interface LeStrokeDataService : NSObject
 
 - (id) initWithPeripheral:(CBPeripheral *)peripheral controller:(id<StrokeDataProtocol>)controller;
 - (void) reset;

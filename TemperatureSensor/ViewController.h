@@ -52,20 +52,20 @@
 #import <UIKit/UIKit.h>
 #import "HeightGraphViewController.h"
 #import "LeDiscovery.h"
-#import "LeTemperatureAlarmService.h"
+#import "LeStrokeDataService.h"
 
 @interface ViewController : UIViewController <LeDiscoveryDelegate, StrokeDataProtocol, UITableViewDataSource, UITableViewDelegate>
-    @property (strong, nonatomic) LeTemperatureAlarmService *currentlyDisplayingService;
+    @property (strong, nonatomic) LeStrokeDataService       *currentlyDisplayingService;
     @property (strong, nonatomic) NSMutableArray            *connectedServices;
     @property (strong, nonatomic) IBOutlet UILabel          *currentlyConnectedSensor;
     @property (strong, nonatomic) IBOutlet UILabel          *currentTemperatureLabel;
     @property (strong, nonatomic) IBOutlet UILabel          *maxAlarmLabel,*minAlarmLabel;
     @property (strong, nonatomic) IBOutlet UITableView      *sensorsTable;
-    @property (strong, nonatomic) IBOutlet UIStepper        *maxAlarmStepper,*minAlarmStepper;
+    //@property (strong, nonatomic) IBOutlet UIStepper        *maxAlarmStepper,*minAlarmStepper;
     - (IBAction)startButtonPressed;
     - (IBAction)stopButtonPressed;
-    - (IBAction)maxStepperChanged;
-    - (IBAction)minStepperChanged;
+//    - (IBAction)maxStepperChanged;
+//    - (IBAction)minStepperChanged;
 
     @property (strong, nonatomic) NSMutableArray            *heightValues;
 @end

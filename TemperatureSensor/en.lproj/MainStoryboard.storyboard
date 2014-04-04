@@ -32,20 +32,6 @@
                                     <outlet property="delegate" destination="2" id="Xmk-Dc-Zqg"/>
                                 </connections>
                             </tableView>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" continuous="NO" autorepeat="NO" wraps="YES" minimumValue="-1" maximumValue="1" id="jf9-Wk-2Gi">
-                                <rect key="frame" x="37" y="300" width="94" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <action selector="minStepperChanged" destination="2" eventType="valueChanged" id="Zga-mH-mcH"/>
-                                </connections>
-                            </stepper>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-1" maximumValue="1" id="mXa-lk-RWw">
-                                <rect key="frame" x="186" y="300" width="94" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <action selector="maxStepperChanged" destination="2" eventType="valueChanged" id="Qnn-fw-KSR"/>
-                                </connections>
-                            </stepper>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MAX 0º" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" enabled="NO" id="GHM-P9-UQD">
                                 <rect key="frame" x="195" y="114" width="133" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -111,9 +97,7 @@
                         <outlet property="currentTemperatureLabel" destination="0qu-gt-E9n" id="QKp-xy-HrE"/>
                         <outlet property="currentlyConnectedSensor" destination="mAT-Mn-P4I" id="cQm-59-NeW"/>
                         <outlet property="maxAlarmLabel" destination="GHM-P9-UQD" id="IB2-7v-pGG"/>
-                        <outlet property="maxAlarmStepper" destination="mXa-lk-RWw" id="Fq3-ab-4zE"/>
                         <outlet property="minAlarmLabel" destination="d8W-iD-ak9" id="jz9-UF-eba"/>
-                        <outlet property="minAlarmStepper" destination="jf9-Wk-2Gi" id="AbW-0t-abh"/>
                         <outlet property="sensorsTable" destination="y4s-ER-bmq" id="4kS-8C-JFB"/>
                     </connections>
                 </viewController>
