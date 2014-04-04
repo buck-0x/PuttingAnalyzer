@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B918252F148D762600D6064E"
                BuildableName = "Putting Analyzer.app"
-               BlueprintName = "TemperatureSensor"
-               ReferencedContainer = "container:TemperatureSensor.xcodeproj">
+               BlueprintName = "PuttingAnalyzer"
+               ReferencedContainer = "container:PuttingAnalyzer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B918252F148D762600D6064E"
             BuildableName = "Putting Analyzer.app"
-            BlueprintName = "TemperatureSensor"
-            ReferencedContainer = "container:TemperatureSensor.xcodeproj">
+            BlueprintName = "PuttingAnalyzer"
+            ReferencedContainer = "container:PuttingAnalyzer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B918252F148D762600D6064E"
             BuildableName = "Putting Analyzer.app"
-            BlueprintName = "TemperatureSensor"
-            ReferencedContainer = "container:TemperatureSensor.xcodeproj">
+            BlueprintName = "PuttingAnalyzer"
+            ReferencedContainer = "container:PuttingAnalyzer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B918252F148D762600D6064E"
             BuildableName = "Putting Analyzer.app"
-            BlueprintName = "TemperatureSensor"
-            ReferencedContainer = "container:TemperatureSensor.xcodeproj">
+            BlueprintName = "PuttingAnalyzer"
+            ReferencedContainer = "container:PuttingAnalyzer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
