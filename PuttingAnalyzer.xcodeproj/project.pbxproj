@@ -124,8 +124,7 @@
 				FB26178F18DF9B6600CD7044 /* ViewController.m */,
 				B918253B148D762600D6064E /* Supporting Files */,
 			);
-			name = PuttingAnalyzer;
-			path = TemperatureSensor;
+			path = PuttingAnalyzer;
 			sourceTree = "<group>";
 		};
 		B918253B148D762600D6064E /* Supporting Files */ = {
@@ -352,13 +351,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TemperatureSensor/PuttingAnalyzer-Prefix.pch";
+				GCC_PREFIX_HEADER = "PuttingAnalyzer/PuttingAnalyzer-Prefix.pch";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				INFOPLIST_FILE = "TemperatureSensor/PuttingAnalyzer-Info.plist";
+				INFOPLIST_FILE = "PuttingAnalyzer/PuttingAnalyzer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,13 +379,13 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TemperatureSensor/PuttingAnalyzer-Prefix.pch";
+				GCC_PREFIX_HEADER = "PuttingAnalyzer/PuttingAnalyzer-Prefix.pch";
 				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				INFOPLIST_FILE = "TemperatureSensor/PuttingAnalyzer-Info.plist";
+				INFOPLIST_FILE = "PuttingAnalyzer/PuttingAnalyzer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
