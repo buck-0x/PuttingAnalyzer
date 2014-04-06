@@ -205,7 +205,7 @@
 
 
 /** Central Manager reset */
-- (void) alarmServiceDidReset
+- (void) strokeDataServiceDidReset
 {
     [_connectedServices removeAllObjects];
 }

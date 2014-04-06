@@ -196,7 +196,7 @@ CGFloat markerSize = 4.0; // actual marker height in cm
         if ([[characteristic UUID] isEqual:currentTemperatureUUID]) { // Current Temp
             NSLog(@"Discovered Temperature Characteristic");
 			distanceCharacteristic = characteristic;
-			[peripheral readValueForCharacteristic:distanceCharacteristic];
+			// [peripheral readValueForCharacteristic:distanceCharacteristic];
 			[peripheral setNotifyValue:YES forCharacteristic:characteristic];
 		} 
 	}

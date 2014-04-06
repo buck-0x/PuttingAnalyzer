@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1FC5986D-67E5-459A-8654-0BFCFCFE0724</string>
+	<string>02C248CE-48D5-4024-AA65-87C926338C0B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PuttingAnalyzer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>27F917A2-BEF7-481C-80E5-58774317B503</key>
-		<string>https://github.com/redthrawn/TemperatureSensor.git</string>
+		<key>69D6DB1E-7EEC-4558-8C1B-C84E19BB29AB</key>
+		<string>https://github.com/redthrawn/PuttingAnalyzer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PuttingAnalyzer.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>27F917A2-BEF7-481C-80E5-58774317B503</key>
+		<key>69D6DB1E-7EEC-4558-8C1B-C84E19BB29AB</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/redthrawn/TemperatureSensor.git</string>
+	<string>https://github.com/redthrawn/PuttingAnalyzer.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>27F917A2-BEF7-481C-80E5-58774317B503</string>
+	<string>69D6DB1E-7EEC-4558-8C1B-C84E19BB29AB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>27F917A2-BEF7-481C-80E5-58774317B503</string>
+			<string>69D6DB1E-7EEC-4558-8C1B-C84E19BB29AB</string>
 			<key>IDESourceControlWCCName</key>
-			<string>TemperatureSensor</string>
+			<string>PuttingAnalyzer</string>
 		</dict>
 	</array>
 </dict>

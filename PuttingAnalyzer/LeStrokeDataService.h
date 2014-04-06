@@ -31,7 +31,7 @@ extern NSString *kStrokeDataServiceEnteredForegroundNotification;
 - (void) strokeDataServiceDidChangeDistance:(LeStrokeDataService*)service;
 //- (void) alarmServiceDidChangeTemperatureBounds:(LeStrokeDataService*)service;
 - (void) strokeDataServiceDidChangeStatus:(LeStrokeDataService*)service;
-- (void) alarmServiceDidReset;
+- (void) strokeDataServiceDidReset;
 @end
 
 

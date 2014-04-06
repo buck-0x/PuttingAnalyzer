@@ -65,6 +65,7 @@
 		FB61BC0118DFCE8C00D70F47 /* FusionCharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionCharts.js; path = ../FusionCharts.js; sourceTree = "<group>"; };
 		FB61BC0218DFCE8C00D70F47 /* FusionChartsExportComponent.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = FusionChartsExportComponent.js; path = ../FusionChartsExportComponent.js; sourceTree = "<group>"; };
 		FB61BC0318DFCE8C00D70F47 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = ../jquery.min.js; sourceTree = "<group>"; };
+		FB6FFE0A18F1F229002A5E03 /* SERVICES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SERVICES.h; sourceTree = "<group>"; };
 		FBB0353B18C9041400D0FF28 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -148,6 +149,7 @@
 		B9182552148D79B900D6064E /* LE */ = {
 			isa = PBXGroup;
 			children = (
+				FB6FFE0A18F1F229002A5E03 /* SERVICES.h */,
 				B9182553148D79D600D6064E /* LeDiscovery.h */,
 				B9182554148D79D600D6064E /* LeDiscovery.m */,
 				B9182555148D79D600D6064E /* LeStrokeDataService.h */,
