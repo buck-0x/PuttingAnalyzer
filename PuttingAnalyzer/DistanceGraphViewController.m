@@ -1,6 +1,6 @@
 //
-//  HeightGraphViewController.h
-//  TemperatureSensor
+//  DistanceGraphViewController.m
+//  PuttingAnalyzer
 //
 //  Created by Bradley Weiers on 2014-01-06.
 //  Copyright (c) 2014 University of Saskatchewan. All rights reserved.

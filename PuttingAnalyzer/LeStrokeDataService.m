@@ -159,8 +159,8 @@ CGFloat markerSize = 4.0;   // actual marker height in cm
 	for (characteristic in characteristics) {
         NSLog(@"discovered characteristic %@", [characteristic UUID]);
         
-        if ([[characteristic UUID] isEqual:currentDistanceUUID]) { // Current Temp
-            NSLog(@"Discovered Temperature Characteristic");
+        if ([[characteristic UUID] isEqual:currentDistanceUUID]) { // Current Distance
+            NSLog(@"Discovered Distance Characteristic");
 			distanceCharacteristic = characteristic;
 			// [peripheral readValueForCharacteristic:distanceCharacteristic];
 			[peripheral setNotifyValue:YES forCharacteristic:characteristic];
@@ -179,11 +179,11 @@ CGFloat markerSize = 4.0;   // actual marker height in cm
  */
 - (void)enteredBackground
 {
-    // Find the fishtank service
+    // Find the service
     for (CBService *service in [servicePeripheral services]) {
         if ([[service UUID] isEqual:[CBUUID UUIDWithString:STROKE_DATA_SERVICE_UUID]]) {
             
-            // Find the temperature characteristic
+            // Find the distance characteristic
             for (CBCharacteristic *characteristic in [service characteristics]) {
                 if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:DISTANCE_CHARACTERISTIC_UUID]] ) {
                     

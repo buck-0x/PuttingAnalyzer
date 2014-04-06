@@ -72,9 +72,9 @@
 
 
 #pragma mark -
-#pragma mark LeTemperatureAlarm Interactions
+#pragma mark LeStrokeData Interactions
 /****************************************************************************/
-/*                  LeTemperatureAlarm Interactions                         */
+/*                  Service Interactions                         */
 /****************************************************************************/
 - (LeStrokeDataService*) serviceForPeripheral:(CBPeripheral *)peripheral
 {
@@ -105,11 +105,11 @@
 
 
 #pragma mark -
-#pragma mark LeTemperatureAlarmProtocol Delegate Methods
+#pragma mark Delegate Methods
 /****************************************************************************/
 /*                      Delegate Methods                                    */
 /****************************************************************************/
-/** Current temp changed */
+/** Current distance changed */
 - (void) strokeDataServiceDidChangeDistance:(LeStrokeDataService*)service
 {  
     if (service != _currentlyDisplayingService)

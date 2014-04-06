@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'TemperatureSensor' target in the 'TemperatureSensor' project
+// Prefix header for all source files of the 'PuttingAnalyzer' target in the 'PuttingAnalyzer' project
 //
 
 #import <Availability.h>
