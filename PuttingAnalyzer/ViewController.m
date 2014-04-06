@@ -27,7 +27,7 @@
     
 	[[LeDiscovery sharedInstance] setDiscoveryDelegate:self];
     [[LeDiscovery sharedInstance] setPeripheralDelegate:self];
-    [[LeDiscovery sharedInstance] startScanningForUUIDString:kStrokeDataServiceUUIDString];
+    [[LeDiscovery sharedInstance] startScanningForUUIDString:STROKE_DATA_SERVICE_UUID];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackgroundNotification:) name:kStrokeDataServiceEnteredBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForegroundNotification:) name:kStrokeDataServiceEnteredForegroundNotification object:nil];

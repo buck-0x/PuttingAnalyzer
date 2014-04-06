@@ -1,3 +1,11 @@
+/*
+ *  LeStrokeDataService.h
+ *  PuttingAnalyzer
+ *
+ *  Created by Bradley Weiers on Jan 6, 2014.
+ *  Copyright University of Saskatchewan. All rights reserved.
+ */
+
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
@@ -6,8 +14,8 @@
 /*						Service Characteristics								*/
 /****************************************************************************/
 // Declare as GLOBAL
-extern NSString *kStrokeDataServiceUUIDString;                 // DEADF154-0000-0000-0000-0000DEADF154     Service UUID
-extern NSString *kDistanceCharacteristicUUIDString;   // CCCCFFFF-DEAD-F154-1319-740381000000     Current Temperature Characteristic
+//extern NSString *STROKE_DATA_SERVICE_UUID;                 // DEADF154-0000-0000-0000-0000DEADF154     Service UUID
+//extern NSString *DISTANCE_CHARACTERISTIC_UUID;   // CCCCFFFF-DEAD-F154-1319-740381000000     Current Distance Characteristic
 //extern NSString *kMinimumTemperatureCharacteristicUUIDString;   // C0C0C0C0-DEAD-F154-1319-740381000000     Minimum Temperature Characteristic
 //extern NSString *kMaximumTemperatureCharacteristicUUIDString;   // EDEDEDED-DEAD-F154-1319-740381000000     Maximum Temperature Characteristic
 //extern NSString *kAlarmCharacteristicUUIDString;                // AAAAAAAA-DEAD-F154-1319-740381000000     Alarm Characteristic

@@ -1,13 +1,22 @@
+/*
+ *  LeStrokeDataService.m
+ *  PuttingAnalyzer
+ *
+ *  Created by Bradley Weiers on Jan 6, 2014.
+ *  Copyright University of Saskatchewan. All rights reserved.
+ */
+
 #import "LeStrokeDataService.h"
 #import "LeDiscovery.h"
+#import "SERVICES.h"
 #include <math.h>
 
 
 //NSString *kTemperatureServiceUUIDString = @"DEADF154-0000-0000-0000-0000DEADF154";
-NSString *kStrokeDataServiceUUIDString = @"00001523-1212-EFDE-1523-785FEABCD123";
+//NSString *STROKE_DATA_SERVICE_UUID = @"00001523-1212-EFDE-1523-785FEABCD123";
 
 //NSString *kCurrentTemperatureCharacteristicUUIDString = @"CCCCFFFF-DEAD-F154-1319-740381000000";
-NSString *kDistanceCharacteristicUUIDString = @"00001524-1212-EFDE-1523-785FEABCD123";
+//NSString *DISTANCE_CHARACTERISTIC_UUID = @"00001524-1212-EFDE-1523-785FEABCD123";
 
 //NSString *kMinimumTemperatureCharacteristicUUIDString = @"C0C0C0C0-DEAD-F154-1319-740381000000";
 //NSString *kMaximumTemperatureCharacteristicUUIDString = @"EDEDEDED-DEAD-F154-1319-740381000000";
@@ -76,7 +85,7 @@ CGFloat markerSize = 4.0; // actual marker height in cm
         
 //        minimumTemperatureUUID	= [CBUUID UUIDWithString:kMinimumTemperatureCharacteristicUUIDString];
 //        maximumTemperatureUUID	= [CBUUID UUIDWithString:kMaximumTemperatureCharacteristicUUIDString];
-        currentTemperatureUUID	= [CBUUID UUIDWithString:kDistanceCharacteristicUUIDString];
+        currentTemperatureUUID	= [CBUUID UUIDWithString:DISTANCE_CHARACTERISTIC_UUID];
 //        temperatureAlarmUUID	= [CBUUID UUIDWithString:kAlarmCharacteristicUUIDString];
 	}
     return self;
@@ -107,7 +116,7 @@ CGFloat markerSize = 4.0; // actual marker height in cm
 /****************************************************************************/
 - (void) start
 {
-	CBUUID	*serviceUUID	= [CBUUID UUIDWithString:kStrokeDataServiceUUIDString];
+	CBUUID	*serviceUUID	= [CBUUID UUIDWithString:STROKE_DATA_SERVICE_UUID];
 	NSArray	*serviceArray	= [NSArray arrayWithObjects:serviceUUID, nil];
 
     [servicePeripheral discoverServices:serviceArray];
@@ -142,7 +151,7 @@ CGFloat markerSize = 4.0; // actual marker height in cm
 	strokeDataService = nil;
     
 	for (CBService *service in services) {
-		if ([[service UUID] isEqual:[CBUUID UUIDWithString:kStrokeDataServiceUUIDString]]) {
+		if ([[service UUID] isEqual:[CBUUID UUIDWithString:STROKE_DATA_SERVICE_UUID]]) {
 			strokeDataService = service;
 			break;
 		}
@@ -248,18 +257,18 @@ CGFloat markerSize = 4.0; // actual marker height in cm
 //}
 
 
-/** If we're connected, we don't want to be getting temperature change notifications while we're in the background.
+/** If we're connected, we don't want to be getting distance change notifications while we're in the background.
  We will want alarm notifications, so we don't turn those off.
  */
 - (void)enteredBackground
 {
     // Find the fishtank service
     for (CBService *service in [servicePeripheral services]) {
-        if ([[service UUID] isEqual:[CBUUID UUIDWithString:kStrokeDataServiceUUIDString]]) {
+        if ([[service UUID] isEqual:[CBUUID UUIDWithString:STROKE_DATA_SERVICE_UUID]]) {
             
             // Find the temperature characteristic
             for (CBCharacteristic *characteristic in [service characteristics]) {
-                if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:kDistanceCharacteristicUUIDString]] ) {
+                if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:DISTANCE_CHARACTERISTIC_UUID]] ) {
                     
                     // And STOP getting notifications from it
                     [servicePeripheral setNotifyValue:NO forCharacteristic:characteristic];
@@ -269,16 +278,16 @@ CGFloat markerSize = 4.0; // actual marker height in cm
     }
 }
 
-/** Coming back from the background, we want to register for notifications again for the temperature changes */
+/** Coming back from the background, we want to register for notifications again for the distance changes */
 - (void)enteredForeground
 {
     // Find the fishtank service
     for (CBService *service in [servicePeripheral services]) {
-        if ([[service UUID] isEqual:[CBUUID UUIDWithString:kStrokeDataServiceUUIDString]]) {
+        if ([[service UUID] isEqual:[CBUUID UUIDWithString:STROKE_DATA_SERVICE_UUID]]) {
             
             // Find the temperature characteristic
             for (CBCharacteristic *characteristic in [service characteristics]) {
-                if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:kDistanceCharacteristicUUIDString]] ) {
+                if ( [[characteristic UUID] isEqual:[CBUUID UUIDWithString:DISTANCE_CHARACTERISTIC_UUID]] ) {
                     
                     // And START getting notifications from it
                     [servicePeripheral setNotifyValue:YES forCharacteristic:characteristic];
