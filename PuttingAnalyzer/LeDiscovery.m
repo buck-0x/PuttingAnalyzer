@@ -2,7 +2,7 @@
  *  LeDiscovery.m
  *  PuttingAnalyzer
  *
- *  Created by Bradley Weiers on Jan 6, 2014.
+ *  Created by Bradley Weiers on 2014-04-06.
  *  Copyright University of Saskatchewan. All rights reserved.
  */
 

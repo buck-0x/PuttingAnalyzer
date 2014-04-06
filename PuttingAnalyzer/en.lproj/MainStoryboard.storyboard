@@ -84,7 +84,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Djf-V7-Wgz"/>
                     <connections>
                         <outlet property="webView" destination="hty-ua-KYf" id="5MP-5k-ZcR"/>
                     </connections>

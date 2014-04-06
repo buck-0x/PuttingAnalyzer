@@ -1,10 +1,14 @@
-//
-//  SERVICES.h
-//  PuttingAnalyzer
-//
-//  Created by Bradley Weiers on 2014-04-06.
-//  Copyright (c) 2014 University of Saskatchewan. All rights reserved.
-//
+/*
+    SERVICES.h
+    PuttingAnalyzer
+
+    Created by Bradley Weiers on 2014-04-06.
+    Copyright (c) 2014 University of Saskatchewan. All rights reserved.
+ 
+    Abstract: Header file containing the UUIDs of the Service and Characteristics.
+*/
+
+
 
 #ifndef PuttingAnalyzer_SERVICES_h
 #define PuttingAnalyzer_SERVICES_h

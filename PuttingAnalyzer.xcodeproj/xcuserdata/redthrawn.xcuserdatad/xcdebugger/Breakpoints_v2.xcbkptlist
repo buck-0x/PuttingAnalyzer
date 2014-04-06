@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PuttingAnalyzer/ViewController.m"
-            timestampString = "418343913.526392"
+            timestampString = "418519529.711475"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "@implementation ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PuttingAnalyzer/ViewController.m"
-            timestampString = "418343913.526392"
+            timestampString = "418519529.711475"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-strokeDataServiceDidChangeStatus:"
             landmarkType = "5">
          </BreakpointContent>

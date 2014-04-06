@@ -20,13 +20,12 @@ CGFloat markerSize = 4.0;   // actual marker height in cm
 @interface LeStrokeDataService() <CBPeripheralDelegate> {
 @private
     CBPeripheral		*servicePeripheral;
-    
     CBService			*strokeDataService;
     
     CBCharacteristic    *distanceCharacteristic;
-    
     CBUUID              *currentDistanceUUID;
-
+    // Define any additional characteristics here
+    
     id<StrokeDataProtocol>	peripheralDelegate;
 }
 @end

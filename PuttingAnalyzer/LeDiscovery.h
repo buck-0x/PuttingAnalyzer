@@ -2,8 +2,12 @@
  *  LeDiscovery.h
  *  PuttingAnalyzer
  *
- *  Created by Bradley Weiers on Jan 6, 2014.
+ *  Created by Bradley Weiers on 2014-04-06.
  *  Copyright University of Saskatchewan. All rights reserved.
+ *
+ *  Abstract: Manages connections between the central and peripheral devices.
+ *      Subscribes to services and enables/disables subscription to 
+ *      characteristics.
  */
 
 #import <Foundation/Foundation.h>
