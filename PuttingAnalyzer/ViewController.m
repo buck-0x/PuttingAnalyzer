@@ -32,14 +32,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackgroundNotification:) name:kStrokeDataServiceEnteredBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForegroundNotification:) name:kStrokeDataServiceEnteredForegroundNotification object:nil];
     
-//    _maxAlarmLabel.hidden = YES;
-//    _minAlarmLabel.hidden = YES;
-    //_maxAlarmStepper.hidden = YES;
-    //_minAlarmStepper.hidden = YES;
-    
-    
-    
-    
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -54,11 +46,9 @@
 {
     [self setCurrentlyConnectedSensor:nil];
     [self setCurrentDistanceLabel:nil];
-//    [self setMaxAlarmLabel:nil];
-//    [self setMinAlarmLabel:nil];
+
     [self setSensorsTable:nil];
-//    [self setMaxAlarmStepper:nil];
-//    [self setMinAlarmStepper:nil];
+
     [self setConnectedServices:nil];
     [self setCurrentlyDisplayingService:nil];
     
@@ -117,73 +107,20 @@
 #pragma mark -
 #pragma mark LeTemperatureAlarmProtocol Delegate Methods
 /****************************************************************************/
-/*				LeTemperatureAlarmProtocol Delegate Methods					*/
+/*                      Delegate Methods                                    */
 /****************************************************************************/
-/** Broke the high or low temperature bound */
-//- (void) alarmService:(LeStrokeDataService*)service didSoundAlarmOfType:(AlarmType)alarm
-//{
-//    if (![service isEqual:_currentlyDisplayingService])
-//        return;
-//    
-//    NSString *title;
-//    NSString *message;
-//    
-//	switch (alarm) {
-//		case kAlarmLow: 
-//			NSLog(@"Alarm low");
-//            title     = @"Alarm Notification";
-//            message   = @"Low Alarm Fired";
-//			break;
-//            
-//		case kAlarmHigh: 
-//			NSLog(@"Alarm high");
-//            title     = @"Alarm Notification";
-//            message   = @"High Alarm Fired";
-//			break;
-//	}
-//    
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//    [alertView show];
-//}
-
-
-/** Back into normal values */
-- (void) alarmServiceDidStopAlarm:(LeStrokeDataService*)service
-{
-    NSLog(@"Alarm stopped");
-}
-
-
 /** Current temp changed */
 - (void) strokeDataServiceDidChangeDistance:(LeStrokeDataService*)service
 {  
     if (service != _currentlyDisplayingService)
         return;
     
-    NSInteger currentTemperature = (int)[service distance];
-    //NSString *currentTemperature = (NSString *)[service temperature];
-    [_heightValues addObject:[NSNumber numberWithInt:currentTemperature]];
-    [_currentDistanceLabel setText:[NSString stringWithFormat:@"%d", currentTemperature]];
-    //[currentTemperatureLabel setText:[NSString stringWithFormat:@"%s", currentTemperature]];
-    //NSLog(@"%@", heightValues);
+    NSInteger currentDistance = (int)[service distance];
+
+    [_heightValues addObject:[NSNumber numberWithInt:currentDistance]];
+    [_currentDistanceLabel setText:[NSString stringWithFormat:@"%d", currentDistance]];
+
 }
-
-
-/** Max or Min change request complete */
-//- (void) alarmServiceDidChangeTemperatureBounds:(LeStrokeDataService*)service
-//{
-//    if (service != _currentlyDisplayingService) 
-//        return;
-//    
-//    [_maxAlarmLabel setText:[NSString stringWithFormat:@"MAX %dº", (int)[_currentlyDisplayingService maximumTemperature]]];
-//    [_minAlarmLabel setText:[NSString stringWithFormat:@"MIN %dº", (int)[_currentlyDisplayingService minimumTemperature]]];
-//
-//    [_maxAlarmStepper setEnabled:YES];
-//    [_minAlarmStepper setEnabled:YES];
-//    
-//    
-//}
-
 
 /** Peripheral connected or disconnected */
 - (void) strokeDataServiceDidChangeStatus:(LeStrokeDataService*)service
@@ -288,8 +225,7 @@
         
         [_currentlyConnectedSensor setEnabled:NO];
         [_currentDistanceLabel setEnabled:NO];
-//        [_maxAlarmLabel setEnabled:NO];
-//        [_minAlarmLabel setEnabled:NO];
+
     }
     
 	else {
@@ -303,13 +239,9 @@
         [_currentlyConnectedSensor setText:[peripheral name]];
         
         [_currentDistanceLabel setText:[NSString stringWithFormat:@"%d", (int)[_currentlyDisplayingService distance]]];
-//        [_maxAlarmLabel setText:[NSString stringWithFormat:@"MAX %dº", (int)[_currentlyDisplayingService maximumTemperature]]];
-//        [_minAlarmLabel setText:[NSString stringWithFormat:@"MIN %dº", (int)[_currentlyDisplayingService minimumTemperature]]];
         
         [_currentlyConnectedSensor setEnabled:YES];
         [_currentDistanceLabel setEnabled:YES];
-//        [_maxAlarmLabel setEnabled:YES];
-//        [_minAlarmLabel setEnabled:YES];
     }
 }
 
@@ -332,72 +264,11 @@
     [alertView show];
 }
 
-
-
 #pragma mark -
 #pragma mark App IO
 /****************************************************************************/
 /*                              App IO Methods                              */
 /****************************************************************************/
-/** Increase or decrease the maximum alarm setting */
-//- (IBAction) maxStepperChanged
-//{
-//    int newTemp = [_currentlyDisplayingService maximumTemperature] * 10;
-//    
-//    if (_maxAlarmStepper.value > 0) {
-//        newTemp+=10;
-//        NSLog(@"increasing MAX temp to %d", newTemp);
-//    }
-//    
-//    if (_maxAlarmStepper.value < 0) {
-//        newTemp-=10;
-//        NSLog(@"decreasing MAX temp to %d", newTemp);
-//    }
-//    
-//    // We're not interested in the actual VALUE of the stepper, just if it's increased or decreased, so reset it to 0 after a press
-//    [_maxAlarmStepper setValue:0];
-//    
-//    // Disable the stepper so we don't send multiple requests to the peripheral
-//    [_maxAlarmStepper setEnabled:NO];
-//    
-//    [_currentlyDisplayingService writeHighAlarmTemperature:newTemp];
-//}
 
-
-/** Increase or decrease the minimum alarm setting */
-//- (IBAction) minStepperChanged
-//{
-//    int newTemp = [_currentlyDisplayingService minimumTemperature] * 10;
-//    
-//    if (_minAlarmStepper.value > 0) {
-//        newTemp+=10;
-//        NSLog(@"increasing MIN temp to %d", newTemp);
-//    }
-//    
-//    if (_minAlarmStepper.value < 0) {
-//        newTemp-=10;
-//        NSLog(@"decreasing MIN temp to %d", newTemp);
-//    }
-//    
-//    // We're not interested in the actual VALUE of the stepper, just if it's increased or decreased, so reset it to 0 after a press
-//    [_minAlarmStepper setValue:0];
-//    
-//    // Disable the stepper so we don't send multiple requests to the peripheral
-//    [_minAlarmStepper setEnabled:NO];
-//    
-//    [_currentlyDisplayingService writeLowAlarmTemperature:newTemp];
-//}
-
-//- (IBAction)startButtonPressed
-//{
-//    
-//    
-//}
-//
-//- (IBAction)stopButtonPressed
-//{
-//    
-//    
-//}
 
 @end
