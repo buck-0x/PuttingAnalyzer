@@ -14,15 +14,12 @@
 }
 @end
 
-
 @implementation LeDiscovery
 
 @synthesize foundPeripherals;
 @synthesize connectedServices;
 @synthesize discoveryDelegate;
 @synthesize peripheralDelegate;
-
-
 
 #pragma mark -
 #pragma mark Init
@@ -60,8 +57,6 @@
     // We are a singleton and as such, dealloc shouldn't be called.
     assert(NO);
 }
-
-
 
 #pragma mark -
 #pragma mark Restoring

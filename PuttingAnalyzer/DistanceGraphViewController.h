@@ -11,6 +11,7 @@
 @interface DistanceGraphViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) NSMutableArray        *heightValues;
 
 // Chart properties.
 @property (nonatomic, retain) NSMutableString       *htmlContent;
@@ -22,9 +23,6 @@
 @property (nonatomic, assign) CGFloat               chartHeight;
 @property (nonatomic, retain) NSMutableString       *debugMode;
 @property (nonatomic, retain) NSMutableString       *registerWithJavaScript;
-
-//
-@property (strong, nonatomic) NSMutableArray        *heightValues;
 
 // Chart methods
 - (void)displayDataError;

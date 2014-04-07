@@ -10,7 +10,6 @@
  *      characteristics.
  */
 
-#import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
 #import "LeStrokeDataService.h"
@@ -23,8 +22,6 @@
 - (void) discoveryStatePoweredOff;
 @end
 
-
-
 /****************************************************************************/
 /*							Discovery class									*/
 /****************************************************************************/
@@ -32,13 +29,11 @@
 
 + (id) sharedInstance;
 
-
 /****************************************************************************/
 /*								UI controls									*/
 /****************************************************************************/
 @property (nonatomic, weak) id<LeDiscoveryDelegate> discoveryDelegate;
 @property (nonatomic, weak) id<StrokeDataProtocol> peripheralDelegate;
-
 
 /****************************************************************************/
 /*								Actions										*/
@@ -48,7 +43,6 @@
 
 - (void) connectPeripheral:(CBPeripheral*)peripheral;
 - (void) disconnectPeripheral:(CBPeripheral*)peripheral;
-
 
 /****************************************************************************/
 /*							Access to the devices							*/

@@ -6,7 +6,6 @@
  *  Copyright University of Saskatchewan. All rights reserved.
  */
 
-#import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
 extern NSString *kStrokeDataServiceEnteredBackgroundNotification;
@@ -22,7 +21,6 @@ extern NSString *kStrokeDataServiceEnteredForegroundNotification;
 - (void) strokeDataServiceDidChangeStatus:(LeStrokeDataService*)service;
 - (void) strokeDataServiceDidReset;
 @end
-
 
 /****************************************************************************/
 /*						Stroke Data Service.                          */
